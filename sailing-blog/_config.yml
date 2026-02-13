@@ -1,0 +1,29 @@
+# Site settings
+title: Sailing Adventures
+description: A blog about our sailing adventures around the world
+url: "http://yourdomain.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  updates:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
