@@ -7,7 +7,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="/assets/images/freddy_penguin.png"
+      href="/assets/images/freddy_penguin.webp"
     />
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -50,47 +50,113 @@
     </style>
   </head>
   <body class="bg-gray-50">
-    <!-- Sticky Navigation Bar -->
-<nav class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
+    
+
+<!-- Modern Sticky Navigation -->
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200/60">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
-                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
-            </div>
-            
-            <!-- Desktop Menu (hidden on medium and smaller screens) -->
-            <div class="hidden md:flex space-x-8">
-                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
-                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
-                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
-                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
-                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+                <img src="/assets/images/freddy_penguin.webp"
+                     alt="Logo"
+                     class="h-9 w-auto">
+
+                <a href="/"
+                   class="text-5xl text-ink logo-font hover:text-brand-600 transition">
+                    Freddy Friends
+                </a>
             </div>
 
-            <!-- Hamburger Button (visible on medium and smaller screens) -->
-            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium">
+
+                <a href="/"
+                class="relative text-ink hover:text-ink transition group">
+                    Home
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/updates/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Updates
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/stories/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Stories
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/location/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Location
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/about/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    About
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="hamburger"
+                    class="md:hidden text-gray-600 hover:text-ink focus:outline-none transition">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
-        </div>
 
-        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-            <div class="flex flex-col space-y-3">
-                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
-                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
-                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
-                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
-                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
-            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+         class="hidden md:hidden border-t border-gray-200/60 bg-white/95 backdrop-blur-md">
+        <div class="px-6 py-6 space-y-5 text-base font-medium">
+
+            <a href="/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Home
+            </a>
+
+            <a href="/updates/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Updates
+            </a>
+
+            <a href="/stories/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Stories
+            </a>
+
+            <a href="/location/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Location
+            </a>
+
+            <a href="/about/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                About
+            </a>
+
         </div>
     </div>
 </nav>
 
 <script>
-    // Toggle mobile menu when hamburger is clicked
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -99,7 +165,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when a link is clicked
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -107,16 +172,15 @@
             });
         });
     }
-</script>
- <!-- Hero Section -->
-<section class="relative w-full h-[38rem] overflow-hidden">
+</script> <!-- Hero Section -->
+<div class="relative w-full h-[36rem]">
 
     <!-- Background Image -->
-    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&h=900&fit=crop"
+    <img src="/assets/images/freddy.jpg"
          alt="Sailboat in beautiful blue water"
          class="absolute inset-0 w-full h-full object-cover">
 
-    <!-- Gradient Overlay -->
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70"></div>
 
     <!-- Hero Content -->
@@ -129,32 +193,27 @@
         </p>
     </div>
 
-    <!-- Circular Profile Overlay -->
+    <!-- Circular Profile Image (Bottom Left Overlay) -->
     <div class="absolute left-8 md:left-16 bottom-0 translate-y-1/2 z-20">
-        <div class="flex items-center gap-5">
 
-            <a href="/about/" class="group relative">
-                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=300&h=300&fit=crop"
+        <div class="flex items-center space-x-5">
+
+            <!-- Image -->
+            <div class="relative">
+                <img src="/assets/images/us.jpg"
                      alt="Blog authors"
-                     class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-xl group-hover:scale-105 transition duration-300">
+                     class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-xl">
 
+                <!-- Optional soft ring effect -->
                 <div class="absolute inset-0 rounded-full ring-4 ring-brand-100"></div>
-            </a>
-
-            <div class="hidden md:block">
-                <p class="text-sm uppercase tracking-widest text-white/70">
-                    The Crew
-                </p>
-                <p class="text-lg font-semibold text-white">
-                    The Hughes Family
-                </p>
             </div>
 
+            
         </div>
+
     </div>
 
-</section>
-
+</div>
 
 <!-- Main Content -->
 <section class="max-w-6xl mx-auto px-6 pt-36 pb-28">
@@ -290,10 +349,11 @@
         <!-- Stories (Primary Section) -->
         <div class="lg:w-2/3">
 
-            <h2 class="text-4xl font-semibold tracking-tight text-ink mb-12">
+                        <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8">
                 Stories
             </h2>
 
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
                 <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">

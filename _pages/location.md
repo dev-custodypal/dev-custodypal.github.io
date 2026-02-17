@@ -5,13 +5,13 @@ permalink: /location/
 
 # Current Location Data
 current_location:
-  name: "Mediterranean Sea"
-  city: "Amalfi Coast, Italy"
-  coordinates: "40.6333° N, 14.6028° E"
-  last_updated: "February 15, 2026"
+  name: "Florida"
+  city: "Fort Lauderdale"
+  coordinates: "26°09'48.7 N 80°06'31.6 W"
+  last_updated: "February 16, 2026"
   weather: "Sunny, 18°C, Light winds"
-  next_destination: "Sicily, Italy"
-  status: "Anchored in a beautiful cove near Positano. Planning to explore the town today and continue south tomorrow. The weather has been perfect for sailing!"
+  next_destination: "New River"
+  status: "Moored behind a house, waiting to find our next stop."
 
 # Recent Ports
 recent_ports:
@@ -43,7 +43,8 @@ recent_ports:
         <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
 
             <!-- Gradient Header -->
-            <div class="bg-gradient-to-r from-brand-700 to-brand-500 text-white p-8 md:p-10">
+            <!-- <div class="bg-gradient-to-r from-brand-700 to-brand-500 text-white p-8 md:p-10"> -->
+            <div class="bg-brand-600/95 backdrop-blur-sm text-white p-8 md:p-10">
                 <div class="flex items-center gap-5">
 
                     <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
@@ -130,17 +131,10 @@ recent_ports:
         <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
 
             <div class="h-[400px] flex items-center justify-center bg-sand text-gray-500">
-                <div class="text-center">
-                    <svg class="w-16 h-16 mx-auto mb-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
-                        </path>
-                    </svg>
-                    <p class="text-lg font-semibold text-ink">Interactive Map</p>
-                    <p class="text-sm mt-2 text-gray-500">
-                        Integrate Google Maps, Leaflet, or Mapbox here
-                    </p>
-                </div>
+                    <iframe src="https://www.noforeignland.com/map/embed/6755394716173262/8/on/day/"
+                        width="100%"
+                        height="100%">
+                    </iframe>
             </div>
 
         </div>

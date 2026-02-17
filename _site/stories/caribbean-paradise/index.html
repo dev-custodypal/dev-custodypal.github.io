@@ -7,7 +7,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="/assets/images/freddy_penguin.png"
+      href="/assets/images/freddy_penguin.webp"
     />
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -50,47 +50,113 @@
     </style>
   </head>
   <body class="bg-gray-50">
-    <!-- Sticky Navigation Bar -->
-<nav class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
+    
+
+<!-- Modern Sticky Navigation -->
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200/60">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
-                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
-            </div>
-            
-            <!-- Desktop Menu (hidden on medium and smaller screens) -->
-            <div class="hidden md:flex space-x-8">
-                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
-                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
-                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
-                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
-                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+                <img src="/assets/images/freddy_penguin.webp"
+                     alt="Logo"
+                     class="h-9 w-auto">
+
+                <a href="/"
+                   class="text-5xl text-ink logo-font hover:text-brand-600 transition">
+                    Freddy Friends
+                </a>
             </div>
 
-            <!-- Hamburger Button (visible on medium and smaller screens) -->
-            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium">
+
+                <a href="/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Home
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/updates/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Updates
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/stories/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Stories
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/location/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Location
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/about/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    About
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="hamburger"
+                    class="md:hidden text-gray-600 hover:text-ink focus:outline-none transition">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
-        </div>
 
-        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-            <div class="flex flex-col space-y-3">
-                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
-                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
-                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
-                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
-                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
-            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+         class="hidden md:hidden border-t border-gray-200/60 bg-white/95 backdrop-blur-md">
+        <div class="px-6 py-6 space-y-5 text-base font-medium">
+
+            <a href="/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Home
+            </a>
+
+            <a href="/updates/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Updates
+            </a>
+
+            <a href="/stories/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Stories
+            </a>
+
+            <a href="/location/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Location
+            </a>
+
+            <a href="/about/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                About
+            </a>
+
         </div>
     </div>
 </nav>
 
 <script>
-    // Toggle mobile menu when hamburger is clicked
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -99,7 +165,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when a link is clicked
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -107,8 +172,7 @@
             });
         });
     }
-</script>
- <article class="container mx-auto px-6 py-12 max-w-4xl">
+</script> <article class="container mx-auto px-6 py-12 max-w-4xl">
     <header class="mb-8">
         <h1 class="text-4xl font-bold text-gray-800 mb-4">Caribbean Paradise</h1>
         <div class="text-gray-600">

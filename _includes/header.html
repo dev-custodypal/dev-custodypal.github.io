@@ -1,44 +1,110 @@
-<!-- Sticky Navigation Bar -->
-<nav class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
+{% assign current_page = page.url %}
+
+<!-- Modern Sticky Navigation -->
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200/60">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <img src="{{ '/assets/images/freddy_penguin.png' | relative_url }}" alt="Logo" class="h-10">
-                <a href="{{ '/' | relative_url }}" class="text-3xl font-bold text-teal-600 logo-font">{{ site.title }}</a>
-            </div>
-            
-            <!-- Desktop Menu (hidden on medium and smaller screens) -->
-            <div class="hidden md:flex space-x-8">
-                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Home</a>
-                <a href="{{ '/updates/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
-                <a href="{{ '/stories/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
-                <a href="{{ '/location/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Location</a>
-                <a href="{{ '/about/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+                <img src="{{ '/assets/images/freddy_penguin.webp' | relative_url }}"
+                     alt="Logo"
+                     class="h-9 w-auto">
+
+                <a href="{{ '/' | relative_url }}"
+                   class="text-5xl text-ink logo-font hover:text-brand-600 transition">
+                    {{ site.title }}
+                </a>
             </div>
 
-            <!-- Hamburger Button (visible on medium and smaller screens) -->
-            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium">
+
+                <a href="{{ '/' | relative_url }}"
+                class="relative {% if page.url == '/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
+                    Home
+                    <span class="absolute -bottom-2 left-0 {% if page.url == '/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="{{ '/updates/' | relative_url }}"
+                class="relative {% if page.url == '/updates/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
+                    Updates
+                    <span class="absolute -bottom-2 left-0 {% if page.url == '/updates/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="{{ '/stories/' | relative_url }}"
+                class="relative {% if page.url == '/stories/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
+                    Stories
+                    <span class="absolute -bottom-2 left-0 {% if page.url == '/stories/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="{{ '/location/' | relative_url }}"
+                class="relative {% if page.url == '/location/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
+                    Location
+                    <span class="absolute -bottom-2 left-0 {% if page.url == '/location/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="{{ '/about/' | relative_url }}"
+                class="relative {% if page.url == '/about/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
+                    About
+                    <span class="absolute -bottom-2 left-0 {% if page.url == '/about/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="hamburger"
+                    class="md:hidden text-gray-600 hover:text-ink focus:outline-none transition">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
-        </div>
 
-        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-            <div class="flex flex-col space-y-3">
-                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
-                <a href="{{ '/updates/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
-                <a href="{{ '/stories/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
-                <a href="{{ '/location/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
-                <a href="{{ '/about/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
-            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+         class="hidden md:hidden border-t border-gray-200/60 bg-white/95 backdrop-blur-md">
+        <div class="px-6 py-6 space-y-5 text-base font-medium">
+
+            <a href="{{ '/' | relative_url }}"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Home
+            </a>
+
+            <a href="{{ '/updates/' | relative_url }}"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Updates
+            </a>
+
+            <a href="{{ '/stories/' | relative_url }}"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Stories
+            </a>
+
+            <a href="{{ '/location/' | relative_url }}"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Location
+            </a>
+
+            <a href="{{ '/about/' | relative_url }}"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                About
+            </a>
+
         </div>
     </div>
 </nav>
 
 <script>
-    // Toggle mobile menu when hamburger is clicked
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -47,7 +113,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when a link is clicked
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
