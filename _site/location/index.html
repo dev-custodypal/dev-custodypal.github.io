@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location - Freddy Friends</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/freddy_penguin.png"
+    />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef6f8',
+            100: '#d6eaf0',
+            200: '#a9d5e1',
+            300: '#7cbfd2',
+            400: '#4faac3',
+            500: '#1f8fae',
+            600: '#16738d',
+            700: '#0f566a',
+            800: '#083a47',
+            900: '#041e25',
+          },
+          sand: '#f7f5f2',
+          ink: '#0f172a'
+        }
+      }
+    }
+  }
+</script>
+    <style>
+      @font-face {
+        font-family: "Riley";
+        src: url('/assets/fonts/RileyFont.ttf')
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo-font {
+        font-family: "Riley", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Sticky Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
+                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
+            </div>
+            
+            <!-- Desktop Menu (hidden on medium and smaller screens) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+            </div>
+
+            <!-- Hamburger Button (visible on medium and smaller screens) -->
+            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu when hamburger is clicked
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+</script>
+ <div class="max-w-6xl mx-auto px-6 py-20">
+
+    <!-- Page Header -->
+    <header class="mb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink mb-4">
+            Our Current Location
+        </h1>
+        <p class="text-lg text-gray-600">
+            Follow our journey around the world
+        </p>
+    </header>
+
+    <!-- Current Location Card -->
+    <div class="max-w-4xl mx-auto mb-16">
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+
+            <!-- Gradient Header -->
+            <div class="bg-gradient-to-r from-brand-700 to-brand-500 text-white p-8 md:p-10">
+                <div class="flex items-center gap-5">
+
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-semibold">
+                            Mediterranean Sea
+                        </h2>
+                        <p class="text-white/80 mt-1">
+                            Amalfi Coast, Italy
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Location Details -->
+            <div class="p-8 md:p-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+
+                    <div>
+                        <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-2">
+                            Coordinates
+                        </h3>
+                        <p class="text-ink font-medium">
+                            40.6333° N, 14.6028° E
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-2">
+                            Last Updated
+                        </h3>
+                        <p class="text-ink font-medium">
+                            February 15, 2026
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-2">
+                            Weather
+                        </h3>
+                        <p class="text-ink font-medium">
+                            Sunny, 18°C, Light winds
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-2">
+                            Next Destination
+                        </h3>
+                        <p class="text-ink font-medium">
+                            Sicily, Italy
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="border-t border-gray-100 pt-8">
+                    <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-3">
+                        Current Status
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Anchored in a beautiful cove near Positano. Planning to explore the town today and continue south tomorrow. The weather has been perfect for sailing!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="max-w-4xl mx-auto mb-16">
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+
+            <div class="h-[400px] flex items-center justify-center bg-sand text-gray-500">
+                <div class="text-center">
+                    <svg class="w-16 h-16 mx-auto mb-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
+                        </path>
+                    </svg>
+                    <p class="text-lg font-semibold text-ink">Interactive Map</p>
+                    <p class="text-sm mt-2 text-gray-500">
+                        Integrate Google Maps, Leaflet, or Mapbox here
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Recent Ports -->
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-semibold tracking-tight text-ink mb-8">
+            Recent Ports of Call
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+
+                <h3 class="font-semibold text-ink mb-1">
+                    Naples, Italy
+                </h3>
+
+                <p class="text-sm text-gray-400 mb-3">
+                    5 days ago
+                </p>
+
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Explored the historic city and enjoyed amazing pizza
+                </p>
+
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+
+                <h3 class="font-semibold text-ink mb-1">
+                    Capri, Italy
+                </h3>
+
+                <p class="text-sm text-gray-400 mb-3">
+                    1 week ago
+                </p>
+
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Visited the famous Blue Grotto and stunning cliffs
+                </p>
+
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+
+                <h3 class="font-semibold text-ink mb-1">
+                    Sardinia, Italy
+                </h3>
+
+                <p class="text-sm text-gray-400 mb-3">
+                    2 weeks ago
+                </p>
+
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Beautiful beaches and crystal-clear waters
+                </p>
+
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+ <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
+    </div>
+</footer>
+
+  </body>
+</html>

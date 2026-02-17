@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Freddy Friends</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/freddy_penguin.png"
+    />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef6f8',
+            100: '#d6eaf0',
+            200: '#a9d5e1',
+            300: '#7cbfd2',
+            400: '#4faac3',
+            500: '#1f8fae',
+            600: '#16738d',
+            700: '#0f566a',
+            800: '#083a47',
+            900: '#041e25',
+          },
+          sand: '#f7f5f2',
+          ink: '#0f172a'
+        }
+      }
+    }
+  }
+</script>
+    <style>
+      @font-face {
+        font-family: "Riley";
+        src: url('/assets/fonts/RileyFont.ttf')
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo-font {
+        font-family: "Riley", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Sticky Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
+                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
+            </div>
+            
+            <!-- Desktop Menu (hidden on medium and smaller screens) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+            </div>
+
+            <!-- Hamburger Button (visible on medium and smaller screens) -->
+            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu when hamburger is clicked
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+</script>
+ <!-- Hero Section -->
+<section class="relative w-full h-[38rem] overflow-hidden">
+
+    <!-- Background Image -->
+    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&h=900&fit=crop"
+         alt="Sailboat in beautiful blue water"
+         class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col justify-end pb-28">
+        <h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-white mb-6">
+            Sailing Stories & Updates
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl">
+            Cruising life, lessons learned, and adventures at sea.
+        </p>
+    </div>
+
+    <!-- Circular Profile Overlay -->
+    <div class="absolute left-8 md:left-16 bottom-0 translate-y-1/2 z-20">
+        <div class="flex items-center gap-5">
+
+            <a href="/about/" class="group relative">
+                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=300&h=300&fit=crop"
+                     alt="Blog authors"
+                     class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-xl group-hover:scale-105 transition duration-300">
+
+                <div class="absolute inset-0 rounded-full ring-4 ring-brand-100"></div>
+            </a>
+
+            <div class="hidden md:block">
+                <p class="text-sm uppercase tracking-widest text-white/70">
+                    The Crew
+                </p>
+                <p class="text-lg font-semibold text-white">
+                    The Hughes Family
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Main Content -->
+<section class="max-w-6xl mx-auto px-6 pt-36 pb-28">
+
+    <div class="flex flex-col lg:flex-row gap-16">
+
+        <!-- Updates (Secondary Column) -->
+        <aside class="lg:w-1/3">
+
+            <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8">
+                Latest Updates
+            </h2>
+
+            <div class="space-y-6">
+                
+                <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6">
+
+                    <div class="flex items-start gap-4">
+
+                        <!-- Icon -->
+                        <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg font-semibold transition group-hover:bg-brand-500 group-hover:text-white">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">
+                                1 week ago
+                            </p>
+
+                            <h3 class="font-semibold text-ink mb-2 leading-snug">
+                                Maintenance Complete
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Finished annual boat maintenance. Ready for the next adventure!
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6">
+
+                    <div class="flex items-start gap-4">
+
+                        <!-- Icon -->
+                        <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg font-semibold transition group-hover:bg-brand-500 group-hover:text-white">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">
+                                1 day ago
+                            </p>
+
+                            <h3 class="font-semibold text-ink mb-2 leading-snug">
+                                New Port Discovered
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Just anchored at a hidden cove near the Amalfi Coast. Stunning views!
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6">
+
+                    <div class="flex items-start gap-4">
+
+                        <!-- Icon -->
+                        <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg font-semibold transition group-hover:bg-brand-500 group-hover:text-white">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">
+                                3 days ago
+                            </p>
+
+                            <h3 class="font-semibold text-ink mb-2 leading-snug">
+                                Photo Gallery Updated
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Added 50+ new photos from our Mediterranean journey.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6">
+
+                    <div class="flex items-start gap-4">
+
+                        <!-- Icon -->
+                        <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg font-semibold transition group-hover:bg-brand-500 group-hover:text-white">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">
+                                2 hours ago
+                            </p>
+
+                            <h3 class="font-semibold text-ink mb-2 leading-snug">
+                                Weather Alert
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Perfect sailing conditions expected this weekend. Light winds from the northeast.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </aside>
+
+
+        <!-- Stories (Primary Section) -->
+        <div class="lg:w-2/3">
+
+            <h2 class="text-4xl font-semibold tracking-tight text-ink mb-12">
+                Stories
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                    
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop"
+                             alt="Crossing the Atlantic"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                    <div class="p-8">
+
+                        <h3 class="text-xl font-semibold text-ink mb-3 leading-snug">
+                            Crossing the Atlantic
+                        </h3>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Our 21-day journey across the Atlantic Ocean, filled with adventures, challenges, and unforgettable sunsets.
+                        </p>
+
+                        <a href="/stories/crossing-the-atlantic/"
+                           class="inline-flex items-center text-brand-600 font-medium group/link">
+                            Read story
+                            <svg class="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+                
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                    
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1537956965359-7573183f1f64?w=600&h=400&fit=crop"
+                             alt="Island Hopping in Greece"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                    <div class="p-8">
+
+                        <h3 class="text-xl font-semibold text-ink mb-3 leading-snug">
+                            Island Hopping in Greece
+                        </h3>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Exploring the stunning Greek islands, from Santorini to Mykonos, discovering hidden beaches and local culture.
+                        </p>
+
+                        <a href="/stories/island-hopping-greece/"
+                           class="inline-flex items-center text-brand-600 font-medium group/link">
+                            Read story
+                            <svg class="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+                
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                    
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&h=400&fit=crop"
+                             alt="Storm at Sea"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                    <div class="p-8">
+
+                        <h3 class="text-xl font-semibold text-ink mb-3 leading-snug">
+                            Storm at Sea
+                        </h3>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            A harrowing encounter with a Mediterranean storm that tested our sailing skills and strengthened our bond.
+                        </p>
+
+                        <a href="/stories/storm-at-sea/"
+                           class="inline-flex items-center text-brand-600 font-medium group/link">
+                            Read story
+                            <svg class="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+                
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                    
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1535024966270-ffe8f2c2d832?w=600&h=400&fit=crop"
+                             alt="Caribbean Paradise"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                    <div class="p-8">
+
+                        <h3 class="text-xl font-semibold text-ink mb-3 leading-snug">
+                            Caribbean Paradise
+                        </h3>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Sailing through crystal-clear waters of the Caribbean, snorkeling with sea turtles and enjoying island life.
+                        </p>
+
+                        <a href="/stories/caribbean-paradise/"
+                           class="inline-flex items-center text-brand-600 font-medium group/link">
+                            Read story
+                            <svg class="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+                
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                    
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544551763-92ab472f5e30?w=600&h=400&fit=crop"
+                             alt="Learning to Sail"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                    <div class="p-8">
+
+                        <h3 class="text-xl font-semibold text-ink mb-3 leading-snug">
+                            Learning to Sail
+                        </h3>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Our journey from complete beginners to confident sailors, with all the mishaps and triumphs along the way.
+                        </p>
+
+                        <a href="/stories/learning-to-sail/"
+                           class="inline-flex items-center text-brand-600 font-medium group/link">
+                            Read story
+                            <svg class="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+                
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                    
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
+                             alt="Norwegian Fjords"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                    <div class="p-8">
+
+                        <h3 class="text-xl font-semibold text-ink mb-3 leading-snug">
+                            Norwegian Fjords
+                        </h3>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Navigating the dramatic landscapes of Norway's fjords, surrounded by towering cliffs and cascading waterfalls.
+                        </p>
+
+                        <a href="/stories/norwegian-fjords/"
+                           class="inline-flex items-center text-brand-600 font-medium group/link">
+                            Read story
+                            <svg class="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</section> <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
+    </div>
+</footer>
+
+  </body>
+</html>

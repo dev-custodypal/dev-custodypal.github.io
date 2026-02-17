@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norwegian Fjords - Freddy Friends</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/freddy_penguin.png"
+    />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef6f8',
+            100: '#d6eaf0',
+            200: '#a9d5e1',
+            300: '#7cbfd2',
+            400: '#4faac3',
+            500: '#1f8fae',
+            600: '#16738d',
+            700: '#0f566a',
+            800: '#083a47',
+            900: '#041e25',
+          },
+          sand: '#f7f5f2',
+          ink: '#0f172a'
+        }
+      }
+    }
+  }
+</script>
+    <style>
+      @font-face {
+        font-family: "Riley";
+        src: url('/assets/fonts/RileyFont.ttf')
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo-font {
+        font-family: "Riley", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Sticky Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
+                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
+            </div>
+            
+            <!-- Desktop Menu (hidden on medium and smaller screens) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+            </div>
+
+            <!-- Hamburger Button (visible on medium and smaller screens) -->
+            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu when hamburger is clicked
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+</script>
+ <article class="container mx-auto px-6 py-12 max-w-4xl">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Norwegian Fjords</h1>
+        <div class="text-gray-600">
+            <time datetime="2024-06-18T00:00:00-04:00">
+                June 18, 2024
+            </time>
+        </div>
+    </header>
+    
+    
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Norwegian Fjords" class="w-full h-96 object-cover rounded-lg mb-8">
+    
+    
+    <div class="prose prose-lg max-w-none">
+        <p>Norway’s fjords are a completely different kind of sailing. Instead of tropical waters and palm trees, we found ourselves surrounded by towering mountains and dramatic landscapes.</p>
+
+<h2 id="the-scenery">The Scenery</h2>
+
+<p>Words can’t describe the beauty of these fjords. Vertical cliffs rise thousands of feet from the water, waterfalls cascade down the rock faces, and the water is so deep you can anchor just meters from the shore.</p>
+
+<h2 id="midnight-sun">Midnight Sun</h2>
+
+<p>Sailing in summer means the midnight sun. It’s disorienting at first—looking at your watch and seeing midnight while the sun is still high in the sky. But it’s also magical, allowing us to sail and explore at all hours.</p>
+
+<h2 id="unique-challenges">Unique Challenges</h2>
+
+<p>The fjords present unique challenges. The winds can be unpredictable, funneling through the narrow valleys. The water is cold, even in summer. And navigation requires constant attention with all the rocks and shallow areas.</p>
+
+<h2 id="small-villages">Small Villages</h2>
+
+<p>We anchored in tiny villages that felt untouched by time. The locals were wonderfully welcoming, and we enjoyed fresh salmon and traditional Norwegian dishes.</p>
+
+<h2 id="a-different-kind-of-paradise">A Different Kind of Paradise</h2>
+
+<p>The fjords aren’t tropical paradise—they’re raw, dramatic, and powerful. But they’re equally beautiful in their own way, and this journey showed us a completely different side of sailing.</p>
+
+<p>If you’re looking for adventure and dramatic scenery, put Norway’s fjords on your sailing bucket list.</p>
+
+    </div>
+</article>
+ <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
+    </div>
+</footer>
+
+  </body>
+</html>

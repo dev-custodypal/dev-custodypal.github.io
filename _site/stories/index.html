@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stories - Freddy Friends</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/freddy_penguin.png"
+    />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef6f8',
+            100: '#d6eaf0',
+            200: '#a9d5e1',
+            300: '#7cbfd2',
+            400: '#4faac3',
+            500: '#1f8fae',
+            600: '#16738d',
+            700: '#0f566a',
+            800: '#083a47',
+            900: '#041e25',
+          },
+          sand: '#f7f5f2',
+          ink: '#0f172a'
+        }
+      }
+    }
+  }
+</script>
+    <style>
+      @font-face {
+        font-family: "Riley";
+        src: url('/assets/fonts/RileyFont.ttf')
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo-font {
+        font-family: "Riley", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Sticky Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
+                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
+            </div>
+            
+            <!-- Desktop Menu (hidden on medium and smaller screens) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+            </div>
+
+            <!-- Hamburger Button (visible on medium and smaller screens) -->
+            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu when hamburger is clicked
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+</script>
+ <div class="container mx-auto px-6 py-12">
+    <header class="mb-12 text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Sailing Stories</h1>
+        <p class="text-xl text-gray-600">Adventures from around the world</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Story Card -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" 
+                 alt="Crossing the Atlantic" 
+                 class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">
+                    February 10, 2024
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Crossing the Atlantic</h3>
+                <p class="text-gray-600 mb-4">Our 21-day journey across the Atlantic Ocean, filled with adventures, challenges, and unforgettable sunsets.</p>
+                <a href="/stories/crossing-the-atlantic/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
+                    Read more
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Story Card -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            
+            <img src="https://images.unsplash.com/photo-1537956965359-7573183f1f64?w=600&h=400&fit=crop" 
+                 alt="Island Hopping in Greece" 
+                 class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">
+                    February 20, 2024
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Island Hopping in Greece</h3>
+                <p class="text-gray-600 mb-4">Exploring the stunning Greek islands, from Santorini to Mykonos, discovering hidden beaches and local culture.</p>
+                <a href="/stories/island-hopping-greece/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
+                    Read more
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Story Card -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            
+            <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&h=400&fit=crop" 
+                 alt="Storm at Sea" 
+                 class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">
+                    March 10, 2024
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Storm at Sea</h3>
+                <p class="text-gray-600 mb-4">A harrowing encounter with a Mediterranean storm that tested our sailing skills and strengthened our bond.</p>
+                <a href="/stories/storm-at-sea/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
+                    Read more
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Story Card -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            
+            <img src="https://images.unsplash.com/photo-1535024966270-ffe8f2c2d832?w=600&h=400&fit=crop" 
+                 alt="Caribbean Paradise" 
+                 class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">
+                    April 05, 2024
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Caribbean Paradise</h3>
+                <p class="text-gray-600 mb-4">Sailing through crystal-clear waters of the Caribbean, snorkeling with sea turtles and enjoying island life.</p>
+                <a href="/stories/caribbean-paradise/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
+                    Read more
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Story Card -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            
+            <img src="https://images.unsplash.com/photo-1544551763-92ab472f5e30?w=600&h=400&fit=crop" 
+                 alt="Learning to Sail" 
+                 class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">
+                    May 12, 2024
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Learning to Sail</h3>
+                <p class="text-gray-600 mb-4">Our journey from complete beginners to confident sailors, with all the mishaps and triumphs along the way.</p>
+                <a href="/stories/learning-to-sail/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
+                    Read more
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Story Card -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" 
+                 alt="Norwegian Fjords" 
+                 class="w-full h-48 object-cover">
+            
+            <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">
+                    June 18, 2024
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Norwegian Fjords</h3>
+                <p class="text-gray-600 mb-4">Navigating the dramatic landscapes of Norway's fjords, surrounded by towering cliffs and cascading waterfalls.</p>
+                <a href="/stories/norwegian-fjords/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
+                    Read more
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+ <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
+    </div>
+</footer>
+
+  </body>
+</html>

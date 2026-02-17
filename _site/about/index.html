@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Freddy Friends</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/freddy_penguin.png"
+    />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef6f8',
+            100: '#d6eaf0',
+            200: '#a9d5e1',
+            300: '#7cbfd2',
+            400: '#4faac3',
+            500: '#1f8fae',
+            600: '#16738d',
+            700: '#0f566a',
+            800: '#083a47',
+            900: '#041e25',
+          },
+          sand: '#f7f5f2',
+          ink: '#0f172a'
+        }
+      }
+    }
+  }
+</script>
+    <style>
+      @font-face {
+        font-family: "Riley";
+        src: url('/assets/fonts/RileyFont.ttf')
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo-font {
+        font-family: "Riley", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Sticky Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/assets/images/freddy_penguin.png" alt="Logo" class="h-10">
+                <a href="/" class="text-3xl font-bold text-teal-600 logo-font">Freddy Friends</a>
+            </div>
+            
+            <!-- Desktop Menu (hidden on medium and smaller screens) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
+            </div>
+
+            <!-- Hamburger Button (visible on medium and smaller screens) -->
+            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
+                <a href="/updates/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
+                <a href="/stories/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
+                <a href="/location/" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
+                <a href="/about/" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu when hamburger is clicked
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+</script>
+ <div class="container mx-auto px-6 py-12">
+    <header class="mb-12 text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">About Us</h1>
+        <p class="text-xl text-gray-600">Meet the sailors behind the adventure</p>
+    </header>
+
+    <!-- Hero Section with Image -->
+    <div class="max-w-4xl mx-auto mb-12">
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1200&h=600&fit=crop" 
+             alt="Our sailing journey" 
+             class="w-full h-96 object-cover rounded-lg shadow-lg">
+    </div>
+
+    <!-- Our Story -->
+    <div class="max-w-4xl mx-auto mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+            <div class="prose prose-lg max-w-none text-gray-600 space-y-4">
+                <p>
+                    We're Sarah and Mike, and we've been living aboard our 35-foot sailboat "Wanderlust" for the past two years. What started as a crazy dream has become the adventure of a lifetime.
+                </p>
+                <p>
+                    Both of us worked traditional office jobs in the city, but we always felt like something was missing. We spent our weekends dreaming about travel and adventure, watching sailing videos on YouTube, and imagining what life could be like if we just took the leap.
+                </p>
+                <p>
+                    In 2023, we decided to stop dreaming and start doing. We sold most of our possessions, bought a boat, and spent six months learning to sail and preparing for this journey. It wasn't easy, and we had plenty of doubts along the way, but we've never looked back.
+                </p>
+                <p>
+                    Since then, we've sailed thousands of nautical miles, visited dozens of countries, and met incredible people from all walks of life. We've weathered storms, witnessed breathtaking sunsets, and learned more about ourselves than we ever could have in our old lives.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Boat -->
+    <div class="max-w-4xl mx-auto mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Boat - "Wanderlust"</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" 
+                         alt="Our sailboat" 
+                         class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-semibold text-gray-700 mb-2">Specifications</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><strong>Length:</strong> 35 feet (10.7 meters)</li>
+                        <li><strong>Type:</strong> Cruising Sloop</li>
+                        <li><strong>Year:</strong> 1995</li>
+                        <li><strong>Home Port:</strong> Currently nomadic!</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">
+                        She's not the newest or fanciest boat, but she's sturdy, reliable, and has become our home. We've made countless upgrades and repairs, learning boat systems inside and out.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet the Crew -->
+    <div class="max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Meet the Crew</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Sarah -->
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" 
+                     alt="Sarah" 
+                     class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Sarah</h3>
+                <p class="text-teal-600 font-semibold mb-4">Captain & Navigator</p>
+                <p class="text-gray-600 text-sm">
+                    Former graphic designer with a passion for photography. Now captures our adventures through the lens and manages our navigation. Loves cooking creative meals in the tiny galley.
+                </p>
+            </div>
+
+            <!-- Mike -->
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" 
+                     alt="Mike" 
+                     class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Mike</h3>
+                <p class="text-teal-600 font-semibold mb-4">First Mate & Engineer</p>
+                <p class="text-gray-600 text-sm">
+                    Former software developer who now codes between anchorages. Handles all boat maintenance and repairs. Master of fixing things with limited tools and endless patience.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-teal-50 p-8 rounded-lg text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Want to Connect?</h2>
+            <p class="text-gray-600 mb-6">
+                We love hearing from readers and fellow sailors! Feel free to reach out with questions, comments, or just to say hello.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="mailto:hello@sailingadventures.com" class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition font-semibold">
+                    Send us an email
+                </a>
+                <a href="#" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition font-semibold">
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
+    </div>
+</footer>
+
+  </body>
+</html>

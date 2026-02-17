@@ -1,5 +1,5 @@
 # Site settings
-title: Sailing Adventures
+title: Freddy Friends
 description: A blog about our sailing adventures around the world
 url: "http://yourdomain.com"
 baseurl: ""
@@ -8,18 +8,29 @@ baseurl: ""
 markdown: kramdown
 permalink: pretty
 
+# Collections directory
+collections_dir: _collections
+
 # Collections
 collections:
   updates:
     output: false
+  stories:
+    output: true
+    permalink: /stories/:title/
 
 # Defaults
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "stories"
     values:
       layout: "post"
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "default"
       
 # Exclude from processing
 exclude:
@@ -27,3 +38,7 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+
+# Include _pages directory
+include:
+  - _pages

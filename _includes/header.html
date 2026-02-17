@@ -3,21 +3,21 @@
     <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <img src="{{ '/assets/images/freddy_penguin.png' | relative_url }}" alt="Logo" class="h-8">
-                <a href="{{ '/' | relative_url }}" class="text-2xl font-bold text-blue-600">{{ site.title }}</a>
+                <img src="{{ '/assets/images/freddy_penguin.png' | relative_url }}" alt="Logo" class="h-10">
+                <a href="{{ '/' | relative_url }}" class="text-3xl font-bold text-teal-600 logo-font">{{ site.title }}</a>
             </div>
             
             <!-- Desktop Menu (hidden on medium and smaller screens) -->
             <div class="hidden md:flex space-x-8">
-                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                <a href="#updates" class="text-gray-700 hover:text-blue-600 transition">Updates</a>
-                <a href="#stories" class="text-gray-700 hover:text-blue-600 transition">Stories</a>
-                <a href="#location" class="text-gray-700 hover:text-blue-600 transition">Location</a>
-                <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
+                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                <a href="{{ '/updates/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Updates</a>
+                <a href="{{ '/stories/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Stories</a>
+                <a href="{{ '/location/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">Location</a>
+                <a href="{{ '/about/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition">About Us</a>
             </div>
 
             <!-- Hamburger Button (visible on medium and smaller screens) -->
-            <button id="hamburger" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+            <button id="hamburger" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -27,11 +27,11 @@
         <!-- Mobile Menu (hidden by default, shown when hamburger is clicked) -->
         <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
             <div class="flex flex-col space-y-3">
-                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-blue-600 transition py-2 border-b border-gray-200">Home</a>
-                <a href="#updates" class="text-gray-700 hover:text-blue-600 transition py-2 border-b border-gray-200">Updates</a>
-                <a href="#stories" class="text-gray-700 hover:text-blue-600 transition py-2 border-b border-gray-200">Stories</a>
-                <a href="#location" class="text-gray-700 hover:text-blue-600 transition py-2 border-b border-gray-200">Location</a>
-                <a href="#about" class="text-gray-700 hover:text-blue-600 transition py-2">About Us</a>
+                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Home</a>
+                <a href="{{ '/updates/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Updates</a>
+                <a href="{{ '/stories/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Stories</a>
+                <a href="{{ '/location/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2 border-b border-gray-200">Location</a>
+                <a href="{{ '/about/' | relative_url }}" class="text-gray-700 hover:text-teal-600 transition py-2">About Us</a>
             </div>
         </div>
     </div>
