@@ -10,32 +10,9 @@
       href="/assets/images/freddy_penguin.webp"
     />
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-brand.js"></script>
 
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: {
-            50: '#eef6f8',
-            100: '#d6eaf0',
-            200: '#a9d5e1',
-            300: '#7cbfd2',
-            400: '#4faac3',
-            500: '#1f8fae',
-            600: '#16738d',
-            700: '#0f566a',
-            800: '#083a47',
-            900: '#041e25',
-          },
-          sand: '#f7f5f2',
-          ink: '#0f172a'
-        }
-      }
-    }
-  }
-</script>
     <style>
       @font-face {
         font-family: "Riley";
@@ -64,7 +41,7 @@
                      class="h-9 w-auto">
 
                 <a href="/"
-                   class="text-5xl text-ink logo-font hover:text-brand-600 transition">
+                   class="text-5xl text-ink logo-font hover:text-brand-600 transition pt-2">
                     Freddy Friends
                 </a>
             </div>
@@ -154,25 +131,7 @@
 
         </div>
     </div>
-</nav>
-
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-</script> <article class="container mx-auto px-6 py-12 max-w-4xl">
+</nav> <article class="container mx-auto px-6 py-12 max-w-4xl">
     <header class="mb-8">
         <h1 class="text-4xl font-bold text-gray-800 mb-4">Caribbean Paradise</h1>
         <div class="text-gray-600">
@@ -215,6 +174,10 @@
         <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
     </div>
 </footer>
+
+
+    <script src="/assets/js/time-ago.js"></script>
+    <script src="/assets/js/hamburger.js"></script>
 
   </body>
 </html>

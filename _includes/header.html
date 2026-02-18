@@ -12,7 +12,7 @@
                      class="h-9 w-auto">
 
                 <a href="{{ '/' | relative_url }}"
-                   class="text-5xl text-ink logo-font hover:text-brand-600 transition">
+                   class="text-5xl text-ink logo-font hover:text-brand-600 transition pt-2">
                     {{ site.title }}
                 </a>
             </div>
@@ -103,21 +103,3 @@
         </div>
     </div>
 </nav>
-
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-</script>

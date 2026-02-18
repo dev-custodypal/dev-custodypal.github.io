@@ -1,0 +1,5 @@
+{% comment %}
+  Embeds the date as a data attribute for JavaScript to calculate time ago dynamically.
+  Usage: {% include time-ago.html date=update.date %}
+{% endcomment %}
+<span class="timeago" data-date="{{ include.date | date: '%Y-%m-%d' }}"></span>
