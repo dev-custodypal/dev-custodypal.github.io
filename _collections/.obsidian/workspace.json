@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_updates/maintenance.md",
+                "file": "_updates/weather-alert.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "maintenance"
+              "title": "weather-alert"
             }
           }
         ]
@@ -186,14 +186,16 @@
   "active": "bcaef5293c7ebfa0",
   "lastOpenFiles": [
     "_updates/README.md",
+    "_updates/photo-gallery.md",
+    "_updates/new-port.md",
+    "_updates/maintenance.md",
+    "_updates/first-night.md",
     "_stories/Untitled 1.md",
     "_stories/Untitled.md",
     "_templates/Story.md",
     "_templates/Update.md",
     "_stories/2024-02-10-crossing-the-atlantic.md",
-    "Untitled.md",
     "_templates",
-    "Untitled.base",
-    "_updates/maintenance.md"
+    "Untitled.base"
   ]
 }
