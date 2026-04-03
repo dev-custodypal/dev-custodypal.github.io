@@ -1,5 +1,4 @@
 ---
-title: title
-time: "{{date}}"
+title: {{VALUE:title}}
 hero_image: 
 ---

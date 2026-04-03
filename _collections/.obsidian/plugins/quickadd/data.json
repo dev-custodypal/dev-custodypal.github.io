@@ -38,7 +38,7 @@
       "templatePath": "_templates/Update.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{DATE:}}-{{VALUE:title|label:Update title}}"
+        "format": "{{DATE:}}-{{VALUE:title|case:slug|label:Title for the Update}}"
       },
       "folder": {
         "enabled": true,
@@ -58,8 +58,7 @@
         "focus": true
       },
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false,
-      "onePageInput": "always"
+      "setFileExistsBehavior": false
     }
   ],
   "inputPrompt": "single-line",

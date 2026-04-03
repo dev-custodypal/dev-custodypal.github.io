@@ -3,7 +3,7 @@
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="http://localhost:4000/" rel="alternate" type="text/html"/>
-  <updated>2026-04-02T23:00:02-04:00</updated>
+  <updated>2026-04-03T10:48:28-04:00</updated>
   <id>http://localhost:4000/feed.xml</id>
   <title type="html">Freddy Friends</title>
   <subtitle>A blog about our sailing adventures around the world</subtitle>
@@ -15,13 +15,67 @@
   
   <entry>
     
+    <title type="html">Update: new update</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="new update"/>
+    
+    <published>2026-04-03T00:00:00-04:00</published>
+    <updated>2026-04-03T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/updates/#new update</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: Is this the taxi</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="Is this the taxi"/>
+    
+    <published>2026-04-02T00:00:00-04:00</published>
+    <updated>2026-04-02T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/updates/#is-this-the-taxi</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;Some lady got on our boat today and asked if it was the free water trolly 😳&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;Some lady got on our boat today and asked if it was the free water trolly 😳&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
     <title type="html">Update: First night at anchor</title>
     
     
     <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="First night at anchor"/>
     
-    <published>2026-04-02T00:00:00-04:00</published>
-    <updated>2026-04-02T00:00:00-04:00</updated>
+    <published>2026-03-28T00:00:00-04:00</published>
+    <updated>2026-03-28T00:00:00-04:00</updated>
     
     <id>http://localhost:4000/updates/#first-night-at-anchor</id>
     
@@ -38,6 +92,33 @@
     </author>
     
     <summary type="html">&lt;p&gt;So much happened today! We saw flying fish and our first turtle!!&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: Back to the new river</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="Back to the new river"/>
+    
+    <published>2026-03-28T00:00:00-04:00</published>
+    <updated>2026-03-28T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/updates/#back-to-the-new-river</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">
 </summary>
     
   </entry>
@@ -67,6 +148,66 @@
     </author>
     
     <summary type="html">&lt;p&gt;Today we ventured out into the Atlantic for a little shakedown sail. We had a few snafus, but we got the sails out and had a fantastic sail!&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: mooring-bouy-by-las-olas-bridgetitle</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="mooring-bouy-by-las-olas-bridgetitle"/>
+    
+    <published>2026-03-17T00:00:00-04:00</published>
+    <updated>2026-03-17T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/updates/#mooring-bouy-by-las-olas-bridge</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;h4 id=&quot;dock-4----mooring-bouy-by-las-olas&quot;&gt;Dock #4 -  Mooring Bouy by Las Olas&lt;/h4&gt;
+&lt;p&gt;This was interesting as we did this all on our own!! Big news for us. We had to get out of a tight spot in the marina, and then get into the …&lt;/p&gt;
+
+&lt;p&gt;Well, just as we turned into the river, there was another boat bearing down on us!!&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;h4 id=&quot;dock-4----mooring-bouy-by-las-olas&quot;&gt;Dock #4 -  Mooring Bouy by Las Olas&lt;/h4&gt;
+&lt;p&gt;This was interesting as we did this all on our own!! Big news for us. We had to get out of a tight spot in the marina, and then get into the …&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: Off to Just Catamarans</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="Off to Just Catamarans"/>
+    
+    <published>2026-03-02T00:00:00-05:00</published>
+    <updated>2026-03-02T00:00:00-05:00</updated>
+    
+    <id>http://localhost:4000/updates/#off-to-just-cats</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;h4 id=&quot;dock-3---harbour-towne&quot;&gt;Dock #3 - Harbour Towne&lt;/h4&gt;
+&lt;p&gt;Here to get some jobs done on Freddy&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;h4 id=&quot;dock-3---harbour-towne&quot;&gt;Dock #3 - Harbour Towne&lt;/h4&gt;
+&lt;p&gt;Here to get some jobs done on Freddy&lt;/p&gt;
 </summary>
     
   </entry>
@@ -108,11 +249,12 @@
     <published>2026-02-25T00:00:00-05:00</published>
     <updated>2026-02-25T00:00:00-05:00</updated>
     
-    <id>http://localhost:4000/updates/#new-dock-002-dom</id>
+    <id>http://localhost:4000/updates/#docked-at-doms</id>
     
     <content type="html" xml:base="http://localhost:4000/updates/">
       
-        &lt;p&gt;Dominic helped us move the boat to behind his house&lt;/p&gt;
+        &lt;h4 id=&quot;dock-2---doms-house&quot;&gt;Dock #2 - Dom’s house&lt;/h4&gt;
+&lt;p&gt;Dominic helped us move the boat to behind his house. Just as well, because we had to navigate the New River with it’s many, many bridges, including a super tight swing bridge. Plus, on top of that, he helped us back into the spot behind his house.&lt;/p&gt;
 
       
     </content>
@@ -120,7 +262,8 @@
       <name>Freddy Friends</name>
     </author>
     
-    <summary type="html">&lt;p&gt;Dominic helped us move the boat to behind his house&lt;/p&gt;
+    <summary type="html">&lt;h4 id=&quot;dock-2---doms-house&quot;&gt;Dock #2 - Dom’s house&lt;/h4&gt;
+&lt;p&gt;Dominic helped us move the boat to behind his house. Just as well, because we had to navigate the New River with it’s many, many bridges, including a super tight swing bridge. Plus, on top of that, he helped us back into the spot behind his house.&lt;/p&gt;
 </summary>
     
   </entry>
@@ -166,7 +309,8 @@
     
     <content type="html" xml:base="http://localhost:4000/updates/">
       
-        &lt;p&gt;Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!&lt;/p&gt;
+        &lt;h4 id=&quot;dock-1---pier-66&quot;&gt;Dock #1 - Pier 66&lt;/h4&gt;
+&lt;p&gt;Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!&lt;/p&gt;
 
       
     </content>
@@ -174,7 +318,8 @@
       <name>Freddy Friends</name>
     </author>
     
-    <summary type="html">&lt;p&gt;Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!&lt;/p&gt;
+    <summary type="html">&lt;h4 id=&quot;dock-1---pier-66&quot;&gt;Dock #1 - Pier 66&lt;/h4&gt;
+&lt;p&gt;Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!&lt;/p&gt;
 </summary>
     
   </entry>

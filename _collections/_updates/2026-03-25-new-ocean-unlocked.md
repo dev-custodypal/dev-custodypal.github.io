@@ -1,6 +1,5 @@
 ---
 title: New ocean unlocked!
-time: 2026-03-25
 hero_image: atlantic-unlocked
 ---
 Today we ventured out into the Atlantic for a little shakedown sail. We had a few snafus, but we got the sails out and had a fantastic sail!
