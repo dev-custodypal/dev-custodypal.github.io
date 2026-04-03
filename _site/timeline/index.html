@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline - Freddy Friends</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/freddy_penguin.webp"
+    />
+
+    <link rel="stylesheet" href="/assets/build/main.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>    
+    <script src="/assets/js/tailwind-brand.js"></script> -->
+
+    <style>
+      @font-face {
+        font-family: "Riley";
+        src: url('/assets/fonts/RileyFont.ttf')
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo-font {
+        font-family: "Riley", sans-serif;
+      }
+    </style>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Freddy Friends" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    
+
+<!-- Modern Sticky Navigation -->
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200/60">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="/assets/images/freddy_penguin.webp"
+                     alt="Logo"
+                     class="h-9 w-auto">
+
+                <a href="/"
+                   class="text-5xl text-ink logo-font hover:text-brand-600 transition pt-2">
+                    Freddy Friends
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium">
+
+                <a href="/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Home
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/updates/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Updates
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/stories/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Stories
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/gallery/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Gallery
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+
+                <a href="/location/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Location
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+                <a href="/about/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    About
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="hamburger"
+                    class="md:hidden text-gray-600 hover:text-ink focus:outline-none transition">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+         class="hidden md:hidden border-t border-gray-200/60 bg-white/95 backdrop-blur-md">
+        <div class="px-6 py-6 space-y-5 text-base font-medium">
+
+            <a href="/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Home
+            </a>
+
+            <a href="/updates/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Updates
+            </a>
+
+            <a href="/stories/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Stories
+            </a>
+
+            <a href="/location/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                Location
+            </a>
+
+            <a href="/about/"
+               class="block text-gray-700 hover:text-brand-600 transition">
+                About
+            </a>
+
+        </div>
+    </div>
+</nav> <div class="max-w-3xl mx-auto px-6 py-16">
+
+  <h1 class="text-4xl font-semibold text-ink mb-12">
+    Journey Timeline
+  </h1>
+
+  
+
+  <div class="relative border-l border-gray-200">
+
+    
+    <div class="mb-12 ml-6">
+
+      <!-- Dot -->
+      <div class="absolute -left-3 w-6 h-6 bg-brand-600 rounded-full border-4 border-white"></div>
+
+      <!-- Content -->
+      <div class="bg-white p-6 rounded-xl shadow-sm border">
+        <p class="text-sm text-gray-500 mb-2">
+          June 15, 2025
+        </p>
+
+        <a href="/stories/2025-06-drive-across-the-country/" class="text-xl font-semibold text-ink">
+          Drive across the country
+        </a>
+
+        <p class="text-gray-600 mt-2">
+          Our journey across the country
+        </p>
+
+        <p class="text-sm text-gray-400 mt-2">
+          📍 
+        </p>
+      </div>
+
+    </div>
+    
+
+  </div>
+
+</div> <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2026 Freddy Friends. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="/assets/js/time-ago.js"></script>
+    <script src="/assets/js/hamburger.js"></script>
+
+  </body>
+</html>

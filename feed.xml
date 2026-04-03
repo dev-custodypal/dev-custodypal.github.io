@@ -1,0 +1,54 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}{{ site.baseurl }}/" rel="alternate" type="text/html"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}{{ site.baseurl }}/feed.xml</id>
+  <title type="html">{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <author>
+    <name>{{ site.author | xml_escape }}</name>
+  </author>
+
+  {% assign all_posts = site.stories | concat: site.updates | sort: 'date' | reverse %}
+  {% for post in all_posts limit: 20 %}
+  <entry>
+    {% if post.collection == 'stories' %}
+    <title type="html">Story: {{ post.title | xml_escape }}</title>
+    {% elsif post.collection == 'updates' %}
+    <title type="html">Update: {{ post.title | xml_escape }}</title>
+    {% else %}
+    <title type="html">{{ post.title | xml_escape }}</title>
+    {% endif %}
+    {% if post.collection == 'updates' %}
+    <link href="{{ site.url }}{{ site.baseurl }}/updates/" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}"/>
+    {% elsif post.url %}
+    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}"/>
+    {% endif %}
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    {% if post.collection == 'updates' %}
+    <id>{{ site.url }}{{ site.baseurl }}/updates/#{{ post.slug }}</id>
+    {% else %}
+    <id>{{ site.url }}{{ site.baseurl }}{{ post.url }}</id>
+    {% endif %}
+    <content type="html" xml:base="{{ site.url }}{{ site.baseurl }}{% if post.collection == 'updates' %}/updates/{% else %}{{ post.url }}{% endif %}">
+      {% if post.content %}
+        {{ post.content | xml_escape }}
+      {% else %}
+        {{ post.description | xml_escape }}
+      {% endif %}
+    </content>
+    <author>
+      <name>{{ site.author | xml_escape }}</name>
+    </author>
+    {% if post.excerpt %}
+    <summary type="html">{{ post.excerpt | xml_escape }}</summary>
+    {% endif %}
+  </entry>
+  {% endfor %}
+</feed>

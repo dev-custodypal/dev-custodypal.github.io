@@ -18,5 +18,5 @@
           ink: '#0f172a'
         }
       }
-    }
+    }, plugins: [tailwind.typography]
   }

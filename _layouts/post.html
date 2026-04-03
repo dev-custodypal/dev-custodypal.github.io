@@ -2,21 +2,207 @@
 layout: default
 ---
 
-<article class="container mx-auto px-6 py-12 max-w-4xl">
+<article class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-4 gap-10">
+
+  <!-- Main Content -->
+  <div class="lg:col-span-3">
     <header class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ page.title }}</h1>
-        <div class="text-gray-600">
-            <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%B %d, %Y" }}
-            </time>
-        </div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
+      <div class="text-gray-500">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+      </div>
     </header>
-    
-    {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-96 object-cover rounded-lg mb-8">
-    {% endif %}
-    
-    <div class="prose prose-lg max-w-none">
-        {{ content }}
+
+    <!-- Images (auto from folder) -->
+    {% assign images = site.static_files | where_exp: "file", "file.path contains page.image_folder" %}
+
+
+ <!-- Horizontal Scroll Gallery -->
+    {% if images.size > 0 %}
+    <div class="relative mb-10">
+      <div class="overflow-x-auto">
+        <div class="flex gap-4 pb-2 snap-x snap-mandatory">
+          
+          {% for image in images %}
+          <div class="flex-shrink-0 w-[60%] sm:w-[40%] md:w-[30%] snap-start">
+            <img 
+              src="{{ image.path }}"
+              alt="{{ page.title }}"
+              class="w-full h-48 object-cover rounded-2xl cursor-pointer gallery-img"
+              onclick="openLightbox({{ forloop.index0 }})"
+            >
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+
+      <!-- Right fade hint -->
+      <div class="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white"></div>
     </div>
+    {% endif %}
+
+
+    {% if page.locations %}
+      
+<div id="map" class="w-full h-72 rounded-xl my-10"></div>
+
+<script>
+
+const map = L.map('map');
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+
+
+
+  const storyLocations = {{ page.locations | jsonify }}; 
+  const allLocations = {{ site.data.locations | jsonify }};
+
+  const locations = storyLocations.reduce((acc, key) => {
+    if (allLocations[key]) acc[key] = allLocations[key];
+    return acc;
+}, {});
+
+
+// Draw route
+const coords = Object.values(locations).map(loc => [loc.lat, loc.lng]);
+
+if (coords.length > 1) {
+  L.polyline(coords, {
+    color: '#1f8fae',
+    weight: 4,
+    smoothFactor: 1.5
+  }).addTo(map);
+}
+
+// Markers
+Object.keys(locations).forEach(key => {
+  const loc = locations[key];
+  {% comment %} const visited = posts.some(p => p.locations && p.locations.includes(key)); {% endcomment %}
+  const marker = L.marker([loc.lat, loc.lng], {
+    opacity: 1
+  }).addTo(map);
+
+  marker.bindTooltip(loc.name, { permanent: false, direction: 'top' });
+  marker.bindPopup(`<strong>${loc.name}</strong>`);
+  marker.on('click', () => {
+    document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Fit map to show all locations
+const allCoords = Object.values(locations).map(loc => [loc.lat, loc.lng]);
+map.fitBounds(allCoords, { padding: [40, 40] });
+</script>
+
+<style>
+/* Fix Leaflet stacking issues */
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 10 !important;
+}
+</style>
+
+
+{% endif %}
+
+{% if page.gallery %}
+  {% include gallery.html images=page.gallery path=page.image_path trip=page.trip %}
+{% endif %}
+
+
+    <div class="prose prose-lg max-w-none">
+      {{ content }}
+    </div>
+  </div>
+
+  <!-- TOC Sidebar -->
+  {% if page.toc %}
+  <aside class="hidden lg:block">
+    <div class="sticky top-24">
+      <div class="bg-sand border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+          On this page
+        </h2>
+
+        {{ content | toc_only }}
+      </div>
+    </div>
+  </aside>
+  {% endif %}
+
 </article>
+
+<!-- Lightbox Script -->
+<script>
+let currentIndex = 0;
+let galleryImages = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  galleryImages = Array.from(document.querySelectorAll(".gallery-img"))
+    .map(img => img.src);
+});
+
+function openLightbox(index) {
+  currentIndex = index;
+
+  const overlay = document.createElement("div");
+  overlay.id = "lightbox";
+  overlay.className = "fixed inset-0 bg-black/90 flex items-center justify-center z-50";
+
+  overlay.innerHTML = `
+    <button id="closeBtn" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+    <button id="prevBtn" class="absolute left-6 text-white text-3xl">&#10094;</button>
+    <img id="lightboxImg" src="${galleryImages[index]}" class="max-h-[90%] max-w-[90%] rounded-lg">
+    <button id="nextBtn" class="absolute right-6 text-white text-3xl">&#10095;</button>
+  `;
+
+  document.body.appendChild(overlay);
+
+  document.getElementById("closeBtn").onclick = () => overlay.remove();
+  document.getElementById("prevBtn").onclick = showPrev;
+  document.getElementById("nextBtn").onclick = showNext;
+
+  let startX = 0;
+
+  overlay.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  overlay.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) showPrev();
+    if (startX - endX > 50) showNext();
+  });
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  document.getElementById("lightboxImg").src = galleryImages[currentIndex];
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  document.getElementById("lightboxImg").src = galleryImages[currentIndex];
+}
+</script>
+
+
+<!-- Optional: Hide scrollbar -->
+<style>
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>

@@ -1,0 +1,24 @@
+road-trip-2025:
+  name: Road Trip Summer 2025
+  start: 2025-06-15
+  end: 2025-06-30
+  color: "#1f8fae"
+
+fort-lauderdale-2025:
+  name: Fort Lauderdale Summer 2025
+  start: 2025-07-01
+  end: 2025-07-14
+  color: "##2aa7c9"
+
+2025-07-east-coast:
+  name: East Coast swing july 2025
+  start: 2025-07-15
+  end: 2025-07-30
+  color: "#4fc3d9"
+
+
+off-to-england:
+  name: East Coast swing july 2025
+  start: 2025-08-01
+  end: 2025-10-22
+  color: "#ef4444"

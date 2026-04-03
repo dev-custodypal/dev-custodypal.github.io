@@ -10,8 +10,10 @@
       href="/assets/images/freddy_penguin.webp"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-brand.js"></script>
+    <link rel="stylesheet" href="/assets/build/main.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>    
+    <script src="/assets/js/tailwind-brand.js"></script> -->
 
     <style>
       @font-face {
@@ -25,6 +27,10 @@
         font-family: "Riley", sans-serif;
       }
     </style>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Freddy Friends" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   </head>
   <body class="bg-gray-50">
     
@@ -66,6 +72,13 @@
                     Stories
                     <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
                 </a>
+
+                <a href="/gallery/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Gallery
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
 
                 <a href="/location/"
                 class="relative text-gray-600 hover:text-ink transition group">
@@ -131,134 +144,413 @@
 
         </div>
     </div>
-</nav> <div class="container mx-auto px-6 py-12">
-    <header class="mb-12 text-center">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">Latest Updates</h1>
-        <p class="text-xl text-gray-600">Stay informed about our journey</p>
-    </header>
+</nav> <!-- Page Header -->
+<section class="bg-sand border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+
+    <h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-ink mb-6">
+      Latest Updates
+    </h1>
+
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Stay informed about our journey
+    </p>
+
+  </div>
+</section>
+
+
+<!-- Updates Grid -->
+<section class="max-w-6xl mx-auto px-10 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-30">
+
+        
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+
+                    
+
+                    
+                    <div class="overflow-hidden">
+                    <img src="/assets/images/gallery/updates/lighthouse-point.jpg"
+                        alt="First night at anchor"
+                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First night at anchor</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        April 02, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-04-02"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>So much happened today! We saw flying fish and our first turtle!!</p>
+
+<p>We had planned to go out sailing with Domonic as it was going to be a bit windier. The plan initially was to go out for a sail and then head back to our dock. But we ended up sailing quite far North, so Domonic suggested that we drop the hook in lighthouse bay for the night. So glad that we did! Not only did we see our first turtle at anchor, but the water was much clearer, so we jumped off the boat and went for a swim!</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+
+                    
+
+                    
+                    <div class="overflow-hidden">
+                    <img src="/assets/images/gallery/updates/atlantic-unlocked.png"
+                        alt="New ocean unlocked!"
+                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">New ocean unlocked!</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        March 25, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-03-25"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>Today we ventured out into the Atlantic for a little shakedown sail. We had a few snafus, but we got the sails out and had a fantastic sail!</p>
+
+<p>On the way back we had some fun with the 17th Street bridge. As we approached the bridge tender radioed us to tell us that one of the spans would not open! So we had to thread our way through just one side - nail</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+
+                    
+
+                    
+
+                
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First dinghy trip!</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        February 28, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-02-28"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>Today we fired up Freddy Jr. and took him into town!</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+
+                    
+
+                    
+
+                
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Docked at Doms!</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        February 25, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-02-25"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>Dominic helped us move the boat to behind his house</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Windy!</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        February 22, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-02-22"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>The wind really picked up last night. Thankfully I had just bought some new Elite fenders :) Incidentally, I bought the fenders off the owner - super nice guy.</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+
+                    
+
+                    
+                    <div class="overflow-hidden">
+                    <img src="/assets/images/freddy-at-night.jpg"
+                        alt="First Night on Freddy!"
+                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+
+                
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First Night on Freddy!</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        February 20, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-02-20"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+                  
+                <div class="p-8">
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Will we ever close</h3>
+                    <div class="text-sm text-gray-400 mb-3">
+                        February 16, 2026
+                       <p>
+                            
+<span class="timeago" data-date="2026-02-16"></span>
+
+                       </p> 
+                    </div>
+
+                    <div class="prose prose-sm max-w-none">
+                        <p>Somehow the onward wire got messed up and the seller didnt get his money - so no boat for us :(</p>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        
+    </div>
+
+</section>
+
+
+<div class="container mx-auto px-6 py-12">
 
     <div class="max-w-3xl mx-auto space-y-6">
         
+        
+
         <!-- Update Card -->
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
                         
 
 
+    <!-- Default icon if name not found -->
     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
 
-  
+
 
                     </div>
                 </div>
                 <div class="flex-1">
                     <p class="text-sm text-gray-500 mb-1">
-<span class="timeago" data-date="2026-02-09"></span>
+<span class="timeago" data-date="2026-04-02"></span>
 </p>
-                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Maintenance Complete</h3>
-                    <p class="text-gray-600">Finished annual boat maintenance. Ready for the next adventure!</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First night at anchor</h3>
+                    <p class="text-gray-600"></p>
                 </div>
             </div>
         </div>
         
+
         <!-- Update Card -->
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
                         
 
 
+    <!-- Default icon if name not found -->
     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
 
-  
+
 
                     </div>
                 </div>
                 <div class="flex-1">
                     <p class="text-sm text-gray-500 mb-1">
-<span class="timeago" data-date="2026-02-13"></span>
+<span class="timeago" data-date="2026-03-25"></span>
 </p>
-                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Photo Gallery Updated</h3>
-                    <p class="text-gray-600">Added 50+ new photos from our Mediterranean journey.</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">New ocean unlocked!</h3>
+                    <p class="text-gray-600"></p>
                 </div>
             </div>
         </div>
         
+
         <!-- Update Card -->
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
                         
 
 
+    <!-- Default icon if name not found -->
     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
 
-  
+
 
                     </div>
                 </div>
                 <div class="flex-1">
                     <p class="text-sm text-gray-500 mb-1">
-<span class="timeago" data-date="2026-02-15"></span>
+<span class="timeago" data-date="2026-02-28"></span>
 </p>
-                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">New Port Discovered</h3>
-                    <p class="text-gray-600">Just anchored at a hidden cove near the Amalfi Coast. Stunning views!</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First dinghy trip!</h3>
+                    <p class="text-gray-600"></p>
                 </div>
             </div>
         </div>
         
+
         <!-- Update Card -->
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
                         
 
 
+    <!-- Default icon if name not found -->
     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
 
-  
+
 
                     </div>
                 </div>
                 <div class="flex-1">
                     <p class="text-sm text-gray-500 mb-1">
-<span class="timeago" data-date="2026-02-16"></span>
+<span class="timeago" data-date="2026-02-25"></span>
 </p>
-                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Weather Alert</h3>
-                    <p class="text-gray-600">Perfect sailing conditions expected this weekend. Light winds from the northeast.</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Docked at Doms!</h3>
+                    <p class="text-gray-600"></p>
                 </div>
             </div>
         </div>
         
+
         <!-- Update Card -->
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
                         
 
 
+    <!-- Default icon if name not found -->
     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
 
-  
+
+
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm text-gray-500 mb-1">
+<span class="timeago" data-date="2026-02-22"></span>
+</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Windy!</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Update Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
+                        
+
+
+    <!-- Default icon if name not found -->
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+
+
 
                     </div>
                 </div>
@@ -266,8 +558,36 @@
                     <p class="text-sm text-gray-500 mb-1">
 <span class="timeago" data-date="2026-02-20"></span>
 </p>
-                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First Night!</h3>
-                    <p class="text-gray-600">After dumping all of our stuff on the boat we had a Captain go over all of the systems on the boat and then move it to a maria where we can sleep aboard. Turns out that the marina was super fancy, with SUPER fancy mega yachts!</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">First Night on Freddy!</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Update Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg--500 rounded-full flex items-center justify-center">
+                        
+
+
+    <!-- Default icon if name not found -->
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+
+
+
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm text-gray-500 mb-1">
+<span class="timeago" data-date="2026-02-16"></span>
+</p>
+                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">Will we ever close</h3>
+                    <p class="text-gray-600"></p>
                 </div>
             </div>
         </div>

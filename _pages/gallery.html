@@ -1,0 +1,192 @@
+---
+layout: default
+title: Gallery
+permalink: /gallery/
+---
+
+<div class="max-w-7xl mx-auto px-6 py-16">
+
+  <!-- Header -->
+  <header class="mb-16 text-center max-w-2xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink mb-4">
+      Photo & Video Gallery
+    </h1>
+    <p class="text-lg text-gray-500">
+      Moments from our sailing adventures
+    </p>
+  </header>
+
+  <!-- Map -->
+  <div id="map" class="w-full h-96 rounded-2xl mb-16"></div>
+
+  {% assign locations = site.data.locations %}
+
+  {% for loc in locations %}
+  <section id="{{ loc[0] }}" class="mb-24">
+
+    <!-- Location Header -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-semibold text-ink">
+        {{ loc[1].name }}
+      </h2>
+      <div class="h-1 w-16 bg-brand-600 rounded-full mt-2"></div>
+    </div>
+
+    <!-- Images (auto from folder) -->
+    {% assign images = site.static_files | where_exp: "file", "file.path contains loc[0]" %}
+
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+
+      {% for img in images %}
+      <div class="break-inside-avoid cursor-pointer group"
+           onclick="openSlideshow('{{ loc[0] }}', {{ forloop.index0 }})">
+
+        <img src="{{ img.path }}"
+             class="w-full h-auto rounded-xl transition duration-300 group-hover:scale-[1.02]">
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- Related Stories -->
+    {% assign related_posts = site.posts | where_exp: "post", "post.locations contains loc[0]" %}
+
+    {% if related_posts.size > 0 %}
+    <div class="mt-10">
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">
+        Stories from here
+      </h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {% for post in related_posts %}
+        <a href="{{ post.url }}" class="block p-4 bg-white rounded-xl border hover:shadow-md transition">
+          <h4 class="font-semibold text-ink">{{ post.title }}</h4>
+          <p class="text-sm text-gray-500">{{ post.excerpt }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </section>
+  {% endfor %}
+
+</div>
+
+<!-- Slideshow -->
+<script>
+let slides = [];
+let currentSlide = 0;
+let slideshowInterval;
+
+function openSlideshow(locationKey, index) {
+  const imgs = document.querySelectorAll(`#${locationKey} img`);
+  slides = Array.from(imgs).map(img => img.src);
+
+  currentSlide = index;
+
+  const overlay = document.createElement('div');
+  overlay.id = 'slideshow';
+  overlay.className = 'fixed inset-0 bg-black/95 flex items-center justify-center z-50';
+
+  overlay.innerHTML = `
+    <img id="slideImg" src="${slides[index]}" class="max-h-[90%] max-w-[90%] rounded-xl">
+    <button onclick="closeSlideshow()" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+  `;
+
+  document.body.appendChild(overlay);
+
+  startSlideshow();
+}
+
+function startSlideshow() {
+  slideshowInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    document.getElementById('slideImg').src = slides[currentSlide];
+  }, 3000);
+}
+
+function closeSlideshow() {
+  clearInterval(slideshowInterval);
+  document.getElementById('slideshow').remove();
+}
+</script>
+
+<!-- Map -->
+<script>
+const map = L.map('map');
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+const locations = {{ site.data.locations | jsonify }};
+const trips = {{ site.data.trips | jsonify }};
+
+// Clean posts data (NO HTML)
+const posts = [
+  {% for post in site.stories %}
+  {
+    title: {{ post.title | jsonify }},
+    url: {{ post.url | jsonify }},
+    date: {{ post.date | date_to_xmlschema | jsonify }},
+    locations: {{ post.locations | jsonify }},
+    trip: {{ post.trip | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+
+// Group posts by trip
+const tripsGrouped = {};
+
+posts.forEach(post => {
+  if (!post.trip) return;
+  if (!tripsGrouped[post.trip]) tripsGrouped[post.trip] = [];
+  tripsGrouped[post.trip].push(post);
+});
+
+// Draw routes
+Object.keys(tripsGrouped).forEach(tripKey => {
+  const tripPosts = tripsGrouped[tripKey]
+    .sort((a,b) => new Date(a.date) - new Date(b.date));
+
+  let coords = [];
+
+  tripPosts.forEach(post => {
+    if (!post.locations) return;
+
+    post.locations.forEach(locKey => {
+      const loc = locations[locKey];
+      if (loc) {
+        coords.push([loc.lat, loc.lng]);
+      }
+    });
+  });
+
+  if (coords.length > 1) {
+    L.polyline(coords, {
+      color: trips[tripKey]?.color || '#1f8fae',
+      weight: 4,
+      smoothFactor: 1.5
+    }).addTo(map);
+  }
+});
+
+// Markers
+Object.keys(locations).forEach(key => {
+  const loc = locations[key];
+  const visited = posts.some(p => p.locations && p.locations.includes(key));
+  const marker = L.marker([loc.lat, loc.lng], {
+    opacity: visited ? 1 : 0.4
+  }).addTo(map);
+
+  marker.bindTooltip(loc.name, { permanent: false, direction: 'top' });
+  marker.bindPopup(`<strong>${loc.name}</strong>`);
+  marker.on('click', () => {
+    document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Fit map to show all locations
+const allCoords = Object.values(locations).map(loc => [loc.lat, loc.lng]);
+map.fitBounds(allCoords, { padding: [40, 40] });
+</script>

@@ -1,0 +1,65 @@
+<!-- Lightbox Script -->
+<script>
+let currentIndex = 0;
+let galleryImages = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  galleryImages = Array.from(document.querySelectorAll(".gallery-img"))
+    .map(img => img.src);
+});
+
+function openLightbox(index) {
+  currentIndex = index;
+
+  const overlay = document.createElement("div");
+  overlay.id = "lightbox";
+  overlay.className = "fixed inset-0 bg-black/90 flex items-center justify-center z-50";
+
+  overlay.innerHTML = `
+    <button id="closeBtn" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+    <button id="prevBtn" class="absolute left-6 text-white text-3xl">&#10094;</button>
+    <img id="lightboxImg" src="${galleryImages[index]}" class="max-h-[90%] max-w-[90%] rounded-lg">
+    <button id="nextBtn" class="absolute right-6 text-white text-3xl">&#10095;</button>
+  `;
+
+  document.body.appendChild(overlay);
+
+  document.getElementById("closeBtn").onclick = () => overlay.remove();
+  document.getElementById("prevBtn").onclick = showPrev;
+  document.getElementById("nextBtn").onclick = showNext;
+
+  let startX = 0;
+
+  overlay.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  overlay.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) showPrev();
+    if (startX - endX > 50) showNext();
+  });
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  document.getElementById("lightboxImg").src = galleryImages[currentIndex];
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  document.getElementById("lightboxImg").src = galleryImages[currentIndex];
+}
+</script>
+
+
+<!-- Optional: Hide scrollbar -->
+<style>
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>

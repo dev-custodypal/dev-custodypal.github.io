@@ -1,0 +1,28 @@
+    <!-- Images (auto from folder) -->
+    {% assign images = site.static_files | where_exp: "file", "file.path contains image_folder" %}
+
+
+ <!-- Horizontal Scroll Gallery -->
+    {% if images.size > 0 %}
+    <div class="relative mb-10">
+      <div class="overflow-x-auto">
+        <div class="flex gap-4 pb-2 snap-x snap-mandatory">
+          
+          {% for image in images %}
+          <div class="flex-shrink-0 w-[60%] sm:w-[40%] md:w-[30%] snap-start">
+            <img 
+              src="{{ image.path }}"
+              alt="{{ page.title }}"
+              class="w-full h-48 object-cover rounded-2xl cursor-pointer gallery-img"
+              onclick="openLightbox({{ forloop.index0 }})"
+            >
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+
+      <!-- Right fade hint -->
+      <div class="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white"></div>
+    </div>
+    {% endif %}

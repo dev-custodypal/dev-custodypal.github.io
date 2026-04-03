@@ -10,8 +10,10 @@
       href="/assets/images/freddy_penguin.webp"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-brand.js"></script>
+    <link rel="stylesheet" href="/assets/build/main.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>    
+    <script src="/assets/js/tailwind-brand.js"></script> -->
 
     <style>
       @font-face {
@@ -25,6 +27,10 @@
         font-family: "Riley", sans-serif;
       }
     </style>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Freddy Friends" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   </head>
   <body class="bg-gray-50">
     
@@ -66,6 +72,13 @@
                     Stories
                     <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
                 </a>
+
+                <a href="/gallery/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Gallery
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
 
                 <a href="/location/"
                 class="relative text-gray-600 hover:text-ink transition group">
@@ -131,193 +144,85 @@
 
         </div>
     </div>
-</nav> <div class="container mx-auto px-6 py-12">
-    <header class="mb-12 text-center">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Sailing Stories</h1>
-        <p class="text-xl text-gray-600">Adventures from around the world</p>
-    </header>
+</nav> <!-- Page Header -->
+<section class="bg-sand border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-6 py-20 text-center">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" 
-                 alt="Crossing the Atlantic" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    February 10, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Crossing the Atlantic</h3>
-                <p class="text-gray-600 mb-4">Our 21-day journey across the Atlantic Ocean, filled with adventures, challenges, and unforgettable sunsets.</p>
-                <a href="/stories/crossing-the-atlantic/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" 
-                 alt="Crossing the Atlantic" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    February 10, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Crossing the Atlantic</h3>
-                <p class="text-gray-600 mb-4">Our 21-day journey across the Atlantic Ocean, filled with adventures, challenges, and unforgettable sunsets.</p>
-                <a href="/stories/Untitled/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1537956965359-7573183f1f64?w=600&h=400&fit=crop" 
-                 alt="Island Hopping in Greece" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    February 20, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Island Hopping in Greece</h3>
-                <p class="text-gray-600 mb-4">Exploring the stunning Greek islands, from Santorini to Mykonos, discovering hidden beaches and local culture.</p>
-                <a href="/stories/island-hopping-greece/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&h=400&fit=crop" 
-                 alt="Storm at Sea" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    March 10, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Storm at Sea</h3>
-                <p class="text-gray-600 mb-4">A harrowing encounter with a Mediterranean storm that tested our sailing skills and strengthened our bond.</p>
-                <a href="/stories/storm-at-sea/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1535024966270-ffe8f2c2d832?w=600&h=400&fit=crop" 
-                 alt="Caribbean Paradise" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    April 05, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Caribbean Paradise</h3>
-                <p class="text-gray-600 mb-4">Sailing through crystal-clear waters of the Caribbean, snorkeling with sea turtles and enjoying island life.</p>
-                <a href="/stories/caribbean-paradise/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1544551763-92ab472f5e30?w=600&h=400&fit=crop" 
-                 alt="Learning to Sail" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    May 12, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Learning to Sail</h3>
-                <p class="text-gray-600 mb-4">Our journey from complete beginners to confident sailors, with all the mishaps and triumphs along the way.</p>
-                <a href="/stories/learning-to-sail/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" 
-                 alt="Norwegian Fjords" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    June 18, 2024
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Norwegian Fjords</h3>
-                <p class="text-gray-600 mb-4">Navigating the dramatic landscapes of Norway's fjords, surrounded by towering cliffs and cascading waterfalls.</p>
-                <a href="/stories/norwegian-fjords/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Story Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" 
-                 alt="Crossing the Atlantic" 
-                 class="w-full h-48 object-cover">
-            
-            <div class="p-6">
-                <div class="text-sm text-gray-500 mb-2">
-                    February 17, 2026
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Crossing the Atlantic</h3>
-                <p class="text-gray-600 mb-4">Our 21-day journey across the Atlantic Ocean, filled with adventures, challenges, and unforgettable sunsets.</p>
-                <a href="/stories/Untitled-1/" class="text-teal-600 hover:text-teal-800 font-semibold inline-flex items-center">
-                    Read more
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
+    <h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-ink mb-6">
+      Sailing Stories
+    </h1>
+
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Adventures, lessons, and moments from life at sea.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- Stories Grid -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+
+
+
+<a href="/stories/2025-06-drive-across-the-country/"
+   class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+
+
+  
+
+    
+
+    
+      <div class="overflow-hidden">
+      <img src="/assets/images/gallery/road-trip-2025/childress/cadilac-ranch.jpg"
+        alt="Drive across the country"
+        class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+      </div>
+    
+
+  
+
+
+  <div class="p-8">
+
+    <div class="text-sm text-gray-400 mb-3">
+      June 15, 2025
     </div>
-</div>
- <!-- Footer -->
+
+    <h2 class="text-xl font-semibold text-ink mb-3 leading-snug group-hover:text-brand-600 transition">
+      Drive across the country
+    </h2>
+
+    <p class="text-gray-600 mb-4 leading-relaxed">
+      Update On a bit of a whim, we decided to pack up and drive across the country. Route Highlights Topock A bit...
+    </p>
+
+    <div class="inline-flex items-center text-brand-600 font-medium">
+      Read story
+      <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+           fill="none"
+           stroke="currentColor"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7">
+        </path>
+      </svg>
+    </div>
+
+  </div>
+
+</a>
+
+
+  </div>
+
+</section> <!-- Footer -->
 <footer class="bg-gray-800 text-white py-8 mt-12">
     <div class="container mx-auto px-6 text-center">
         <p>&copy; 2026 Freddy Friends. All rights reserved.</p>

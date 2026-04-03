@@ -10,8 +10,10 @@
       href="{{ '/assets/images/freddy_penguin.webp' | relative_url }}"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="{{ '/assets/js/tailwind-brand.js' | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/build/main.css' | relative_url }}">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>    
+    <script src="{{ '/assets/js/tailwind-brand.js' | relative_url }}"></script> -->
 
     <style>
       @font-face {
@@ -25,6 +27,10 @@
         font-family: "Riley", sans-serif;
       }
     </style>
+    {% feed_meta %}
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   </head>
   <body class="bg-gray-50">
     {% include header.html %} {{ content }} {% include footer.html %}

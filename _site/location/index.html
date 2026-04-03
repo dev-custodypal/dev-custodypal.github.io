@@ -10,8 +10,10 @@
       href="/assets/images/freddy_penguin.webp"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-brand.js"></script>
+    <link rel="stylesheet" href="/assets/build/main.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>    
+    <script src="/assets/js/tailwind-brand.js"></script> -->
 
     <style>
       @font-face {
@@ -25,6 +27,10 @@
         font-family: "Riley", sans-serif;
       }
     </style>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Freddy Friends" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   </head>
   <body class="bg-gray-50">
     
@@ -66,6 +72,13 @@
                     Stories
                     <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
                 </a>
+
+                <a href="/gallery/"
+                class="relative text-gray-600 hover:text-ink transition group">
+                    Gallery
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
 
                 <a href="/location/"
                 class="relative text-ink hover:text-ink transition group">
@@ -234,7 +247,7 @@
         <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
 
             <div class="h-[400px] flex items-center justify-center bg-sand text-gray-500">
-                    <iframe src="https://www.noforeignland.com/map/embed/6755394716173262/8/on/day/" width="100%" height="100%">
+                    <iframe src="https://www.noforeignland.com/map/embed/6755394716184973/8/on/day/" width="100%" height="100%">
                     </iframe>
             </div>
 
@@ -252,7 +265,7 @@
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
 
                 <h3 class="font-semibold text-ink mb-1">
-                    Naples, Italy
+                    Dominic's House
                 </h3>
 
                 <p class="text-sm text-gray-400 mb-3">
@@ -260,7 +273,7 @@
                 </p>
 
                 <p class="text-sm text-gray-600 leading-relaxed">
-                    Explored the historic city and enjoyed amazing pizza
+                    
                 </p>
 
             </div>
@@ -268,7 +281,7 @@
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
 
                 <h3 class="font-semibold text-ink mb-1">
-                    Capri, Italy
+                    Pier 66
                 </h3>
 
                 <p class="text-sm text-gray-400 mb-3">
@@ -276,7 +289,7 @@
                 </p>
 
                 <p class="text-sm text-gray-600 leading-relaxed">
-                    Visited the famous Blue Grotto and stunning cliffs
+                    
                 </p>
 
             </div>
@@ -284,7 +297,7 @@
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
 
                 <h3 class="font-semibold text-ink mb-1">
-                    Sardinia, Italy
+                    Coral Ridge
                 </h3>
 
                 <p class="text-sm text-gray-400 mb-3">
@@ -292,7 +305,7 @@
                 </p>
 
                 <p class="text-sm text-gray-600 leading-relaxed">
-                    Beautiful beaches and crystal-clear waters
+                    where we got the boat!
                 </p>
 
             </div>

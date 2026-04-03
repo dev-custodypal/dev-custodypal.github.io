@@ -33,21 +33,21 @@ icon: "weather"
 
 ## Available Icons
 
-| Icon Name | Aliases | Use For |
-|-----------|---------|---------|
-| `weather` | `lightning` | Weather alerts, storm warnings |
-| `location` | `map`, `pin` | New locations, ports, destinations |
-| `camera` | `photo`, `image` | Photo galleries, new pictures |
-| `clock` | `time` | Time-related updates, schedules |
-| `anchor` | `port` | Port arrivals, anchoring |
-| `sail` | `boat`, `ship` | Sailing updates, departures |
-| `sun` | `sunny` | Good weather, sunny days |
-| `heart` | `favorite` | Favorite places, special moments |
-| `star` | - | Highlights, special events |
-| `wrench` | `tool`, `maintenance` | Boat maintenance, repairs |
-| `check` | `complete`, `done` | Completed tasks, achievements |
-| `info` | `information` | General information |
-| `alert` | `warning` | Important warnings, alerts |
+| Icon Name  | Aliases               | Use For                            |
+| ---------- | --------------------- | ---------------------------------- |
+| `weather`  | `lightning`           | Weather alerts, storm warnings     |
+| `location` | `map`, `pin`          | New locations, ports, destinations |
+| `camera`   | `photo`, `image`      | Photo galleries, new pictures      |
+| `clock`    | `time`                | Time-related updates, schedules    |
+| `anchor`   | `port`                | Port arrivals, anchoring           |
+| `sail`     | `boat`, `ship`        | Sailing updates, departures        |
+| `sun`      | `sunny`               | Good weather, sunny days           |
+| `heart`    | `favorite`            | Favorite places, special moments   |
+| `star`     | -                     | Highlights, special events         |
+| `wrench`   | `tool`, `maintenance` | Boat maintenance, repairs          |
+| `check`    | `complete`, `done`    | Completed tasks, achievements      |
+| `info`     | `information`         | General information                |
+| `alert`    | `warning`             | Important warnings, alerts         |
 
 ## Examples
 

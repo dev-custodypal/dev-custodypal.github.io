@@ -38,6 +38,13 @@
                     <span class="absolute -bottom-2 left-0 {% if page.url == '/stories/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
                 </a>
 
+                <a href="{{ '/gallery/' | relative_url }}"
+                class="relative {% if page.url == '/gallery/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
+                    Gallery
+                    <span class="absolute -bottom-2 left-0 {% if page.url == '/gallery/' %}w-full{% else %}w-0{% endif %} h-0.5 bg-brand-500 transition-all group-hover:w-full"></span>
+                </a>
+
+
                 <a href="{{ '/location/' | relative_url }}"
                 class="relative {% if page.url == '/location/' %}text-ink{% else %}text-gray-600{% endif %} hover:text-ink transition group">
                     Location

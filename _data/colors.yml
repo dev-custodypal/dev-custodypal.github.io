@@ -1,0 +1,64 @@
+
+# 🎯 Smart assignment strategy
+# 
+# Instead of random:
+# 
+# Same region → same color family
+# Different trips → different shade
+# 
+# Example:
+# 
+# Trip	Color
+# Bahamas Trip 1	blue-1
+# Bahamas Trip 2	blue-3
+# Florida Loop	green-2
+# Big Ocean Crossing	purple-2
+
+
+
+
+blue-1: "#1f8fae"
+blue-2: "#2aa7c9"
+blue-3: "#4fc3d9"
+blue-4: "#6dd5ed"
+blue-5: "#0284c7"
+blue-6: "#0369a1"
+blue-7: "#075985"
+
+
+green-1: "#22c55e"
+green-2: "#4ade80"
+green-3: "#86efac"
+green-4: "#16a34a"
+green-5: "#15803d"
+green-6: "#166534"
+green-7: "#14532d"
+
+
+orange-1: "#f97316"
+orange-2: "#fb923c"
+orange-3: "#fdba74"
+orange-4: "#ea580c"
+orange-5: "#c2410c"
+orange-6: "#9a3412"
+orange-7: "#7c2d12"
+
+
+purple-1: "#a855f7"
+purple-2: "#c084fc"
+purple-3: "#d8b4fe"
+purple-4: "#9333ea"
+purple-5: "#7e22ce"
+purple-6: "#6b21a8"
+purple-7: "#581c87"
+
+
+red-1: "#ef4444"
+red-2: "#f87171"
+red-3: "#fca5a5"
+red-4: "#dc2626"
+red-5: "#b91c1c"
+red-6: "#991b1b"
+red-7: "#7f1d1d"
+
+

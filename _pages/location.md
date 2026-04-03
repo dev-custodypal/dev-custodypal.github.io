@@ -15,15 +15,15 @@ current_location:
 
 # Recent Ports
 recent_ports:
-  - name: "Naples, Italy"
+  - name: "Dominic's House"
     time_ago: "5 days ago"
-    description: "Explored the historic city and enjoyed amazing pizza"
-  - name: "Capri, Italy"
+    description: ""
+  - name: "Pier 66"
     time_ago: "1 week ago"
-    description: "Visited the famous Blue Grotto and stunning cliffs"
-  - name: "Sardinia, Italy"
+    description: ""
+  - name: "Coral Ridge"
     time_ago: "2 weeks ago"
-    description: "Beautiful beaches and crystal-clear waters"
+    description: "where we got the boat!"
 ---
 
 <div class="max-w-6xl mx-auto px-6 py-20">
@@ -131,7 +131,7 @@ recent_ports:
         <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
 
             <div class="h-[400px] flex items-center justify-center bg-sand text-gray-500">
-                    <iframe src="https://www.noforeignland.com/map/embed/6755394716173262/8/on/day/"
+                    <iframe src="https://www.noforeignland.com/map/embed/6755394716184973/8/on/day/"
                         width="100%"
                         height="100%">
                     </iframe>

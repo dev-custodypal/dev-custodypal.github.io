@@ -1,0 +1,127 @@
+san-carlos:
+  name: San Carlos (Home)
+  lat: 37.4925194
+  lng: -122.2683846
+  trip: road-trip-2025 
+
+topock:
+  name: Topock (Topock 66)
+  lat: 34.7192
+  lng: -114.4864376
+  trip: road-trip-2025 
+
+flagstaff:
+  name: Flagstaff (High Country Motor Lodge)
+  lat: 35.1919116
+  lng: -111.6685581
+  trip: road-trip-2025 
+
+santa-fe:
+  name: Santa Fe (Hotel Chimayo)
+  lat: 35.6883708
+  lng: -105.9373859
+  trip: road-trip-2025 
+
+childress:
+  name: Childress ()
+  lat: 34.4340536
+  lng: -100.2335823
+  trip: road-trip-2025 
+
+shrievport:
+  name: Shrievport
+  lat: 32.5211549
+  lng: -93.7462063
+  trip: road-trip-2025 
+
+new-orleans:
+  name: New Orleans
+  lat: 29.9578392
+  lng: -90.0690818
+  trip: road-trip-2025 
+
+tallahassee:
+  name: Tallahassee
+  lat: 30.4789881
+  lng: -84.4317777
+  trip: road-trip-2025 
+
+fort-lauderdale:
+  name: Fort Lauderdale
+  lat: 26.0886024
+  lng: -80.1542864
+  trip: road-trip-2025 
+
+hampton:
+  name: "Hampton, VA"
+  lat: 37.0370659
+  lng: -76.3839671  
+  trip: 2025-07-east-coast
+
+east-orange:
+  name: "East Orange"
+  lat: 40.7667057
+  lng: -74.2552072
+  trip: 2025-07-east-coast
+
+nyc:
+  name: "New York City"
+  lat: 40.7550488
+  lng: -73.9906057 
+  trip: 2025-07-east-coast
+
+savanah:
+  name: "Savanah"
+  lat: 32.0389409
+  lng: -81.3708526
+  trip: 2025-07-east-coast
+
+gatwick:
+  name: "Gatwick Airport"
+  lat: 51.1552416
+  lng: -0.1650401
+  trip: off-to-england
+
+south-luffenham:
+  name: South Luffenham
+  lat: 52.6068763
+  lng: -0.6173728
+  trip: off-to-england
+
+horsford:
+  name: Horsford
+  lat: 52.6984311
+  lng: 1.2074002
+  trip: off-to-england
+
+brighton:
+  name: Brighton
+  lat: 50.8374973
+  lng: -0.1885906
+  trip: off-to-england
+
+peterbrough:
+  name: Peterbrough
+  lat: 52.5850271
+  lng: -0.4652613
+  trip: off-to-england
+
+annapolis:
+  name: Annapolis
+  lat: 38.9726755
+  lng: -76.504767
+
+cary:
+  name: Cary
+  lat: 35.7707806
+  lng: -79.0042553
+
+hilton-head:
+  name: Hilton Head Island
+  lat: 32.1840921
+  lng: -80.8246309
+
+st-petersburg:
+  name: St Petersburg
+  lat: 27.7829964
+  lng: -82.8209109

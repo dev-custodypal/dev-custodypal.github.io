@@ -1,8 +1,14 @@
 # Site settings
-title: Freddy Friends
+title: "Freddy Friends"
 description: A blog about our sailing adventures around the world
 url: "http://yourdomain.com"
 baseurl: ""
+author: Freddy Friends
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-toc
 
 # Build settings
 markdown: kramdown
@@ -18,6 +24,8 @@ collections:
   stories:
     output: true
     permalink: /stories/:title/
+  gallery:
+    output: false
 
 # Defaults
 defaults:
@@ -42,3 +50,12 @@ exclude:
 # Include _pages directory
 include:
   - _pages
+
+feed:
+  collections:
+    - stories
+    - updates
+
+
+  kramdown:
+  toc_levels: 1..3

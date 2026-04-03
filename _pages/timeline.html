@@ -1,0 +1,47 @@
+---
+layout: default
+title: Timeline
+permalink: /timeline/
+---
+
+<div class="max-w-3xl mx-auto px-6 py-16">
+
+  <h1 class="text-4xl font-semibold text-ink mb-12">
+    Journey Timeline
+  </h1>
+
+  {% assign posts = site.stories | sort: "date" %}
+
+  <div class="relative border-l border-gray-200">
+
+    {% for post in posts %}
+    <div class="mb-12 ml-6">
+
+      <!-- Dot -->
+      <div class="absolute -left-3 w-6 h-6 bg-brand-600 rounded-full border-4 border-white"></div>
+
+      <!-- Content -->
+      <div class="bg-white p-6 rounded-xl shadow-sm border">
+        <p class="text-sm text-gray-500 mb-2">
+          {{ post.date | date: "%B %d, %Y" }}
+        </p>
+
+        <a href="{{ post.url }}" class="text-xl font-semibold text-ink">
+          {{ post.title }}
+        </a>
+
+        <p class="text-gray-600 mt-2">
+          {{ post.excerpt }}
+        </p>
+
+        <p class="text-sm text-gray-400 mt-2">
+          📍 {{ post.location }}
+        </p>
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+</div>

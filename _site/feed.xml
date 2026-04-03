@@ -1,1 +1,259 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-02-22T09:58:16-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Freddy Friends</title><subtitle>A blog about our sailing adventures around the world</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://localhost:4000/" rel="alternate" type="text/html"/>
+  <updated>2026-04-02T23:00:02-04:00</updated>
+  <id>http://localhost:4000/feed.xml</id>
+  <title type="html">Freddy Friends</title>
+  <subtitle>A blog about our sailing adventures around the world</subtitle>
+  <author>
+    <name>Freddy Friends</name>
+  </author>
+
+  
+  
+  <entry>
+    
+    <title type="html">Update: First night at anchor</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="First night at anchor"/>
+    
+    <published>2026-04-02T00:00:00-04:00</published>
+    <updated>2026-04-02T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/updates/#first-night-at-anchor</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;So much happened today! We saw flying fish and our first turtle!!&lt;/p&gt;
+
+&lt;p&gt;We had planned to go out sailing with Domonic as it was going to be a bit windier. The plan initially was to go out for a sail and then head back to our dock. But we ended up sailing quite far North, so Domonic suggested that we drop the hook in lighthouse bay for the night. So glad that we did! Not only did we see our first turtle at anchor, but the water was much clearer, so we jumped off the boat and went for a swim!&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;So much happened today! We saw flying fish and our first turtle!!&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: New ocean unlocked!</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="New ocean unlocked!"/>
+    
+    <published>2026-03-25T00:00:00-04:00</published>
+    <updated>2026-03-25T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/updates/#new-ocean-unlocked</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;Today we ventured out into the Atlantic for a little shakedown sail. We had a few snafus, but we got the sails out and had a fantastic sail!&lt;/p&gt;
+
+&lt;p&gt;On the way back we had some fun with the 17th Street bridge. As we approached the bridge tender radioed us to tell us that one of the spans would not open! So we had to thread our way through just one side - nail&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;Today we ventured out into the Atlantic for a little shakedown sail. We had a few snafus, but we got the sails out and had a fantastic sail!&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: First dinghy trip!</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="First dinghy trip!"/>
+    
+    <published>2026-02-28T00:00:00-05:00</published>
+    <updated>2026-02-28T00:00:00-05:00</updated>
+    
+    <id>http://localhost:4000/updates/#first-dinghy-trip</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;Today we fired up Freddy Jr. and took him into town!&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;Today we fired up Freddy Jr. and took him into town!&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: Docked at Doms!</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="Docked at Doms!"/>
+    
+    <published>2026-02-25T00:00:00-05:00</published>
+    <updated>2026-02-25T00:00:00-05:00</updated>
+    
+    <id>http://localhost:4000/updates/#new-dock-002-dom</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;Dominic helped us move the boat to behind his house&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;Dominic helped us move the boat to behind his house&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: Windy!</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="Windy!"/>
+    
+    <published>2026-02-22T00:00:00-05:00</published>
+    <updated>2026-02-22T00:00:00-05:00</updated>
+    
+    <id>http://localhost:4000/updates/#windy</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;The wind really picked up last night. Thankfully I had just bought some new Elite fenders :) Incidentally, I bought the fenders off the owner - super nice guy.&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;The wind really picked up last night. Thankfully I had just bought some new Elite fenders :) Incidentally, I bought the fenders off the owner - super nice guy.&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: First Night on Freddy!</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="First Night on Freddy!"/>
+    
+    <published>2026-02-20T00:00:00-05:00</published>
+    <updated>2026-02-20T00:00:00-05:00</updated>
+    
+    <id>http://localhost:4000/updates/#first-night</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;Our new friend - Dominic - helped us move the boat to Pier 66. Just as well, as the slip they gave us was crazy tight!! Desperately expensive with no toilet or showers!!&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Update: Will we ever close</title>
+    
+    
+    <link href="http://localhost:4000/updates/" rel="alternate" type="text/html" title="Will we ever close"/>
+    
+    <published>2026-02-16T00:00:00-05:00</published>
+    <updated>2026-02-16T00:00:00-05:00</updated>
+    
+    <id>http://localhost:4000/updates/#will-we-ever-close</id>
+    
+    <content type="html" xml:base="http://localhost:4000/updates/">
+      
+        &lt;p&gt;Somehow the onward wire got messed up and the seller didnt get his money - so no boat for us :(&lt;/p&gt;
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">&lt;p&gt;Somehow the onward wire got messed up and the seller didnt get his money - so no boat for us :(&lt;/p&gt;
+</summary>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html">Story: Drive across the country</title>
+    
+    
+    <link href="http://localhost:4000/stories/2025-06-drive-across-the-country/" rel="alternate" type="text/html" title="Drive across the country"/>
+    
+    <published>2025-06-15T00:00:00-04:00</published>
+    <updated>2025-06-15T00:00:00-04:00</updated>
+    
+    <id>http://localhost:4000/stories/2025-06-drive-across-the-country/</id>
+    
+    <content type="html" xml:base="http://localhost:4000/stories/2025-06-drive-across-the-country/">
+      
+        &lt;h2 id=&quot;update&quot;&gt;Update&lt;/h2&gt;
+
+&lt;p&gt;On a bit of a whim, we decided to pack up and drive across the country.&lt;/p&gt;
+
+&lt;h3 id=&quot;route-highlights&quot;&gt;Route Highlights&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Topock&lt;/strong&gt;&lt;br /&gt;
+ A bit of a random stop&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Flagstaff&lt;/strong&gt;&lt;br /&gt;
+  The darkest hotel bedroom in history. Oh, and the coldest pool!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Santa Fe&lt;/strong&gt;&lt;br /&gt;
+ Awesome place - loved it!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Childress&lt;/strong&gt;&lt;br /&gt;
+ By far the worst place that we stayed. But… Texas-shaped waffle maker!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Shreveport&lt;/strong&gt;&lt;br /&gt;
+ Just needed something a little nicer than the average hotel… Margaritaville!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;New Orleans&lt;/strong&gt; &lt;br /&gt;
+ The earplugs on the bedside table were the giveaway&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tallahassee&lt;/strong&gt;&lt;br /&gt;
+ Cool little hotel&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+
+      
+    </content>
+    <author>
+      <name>Freddy Friends</name>
+    </author>
+    
+    <summary type="html">Our journey across the country</summary>
+    
+  </entry>
+  
+</feed>
