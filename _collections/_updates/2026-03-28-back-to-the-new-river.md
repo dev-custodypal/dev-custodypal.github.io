@@ -1,4 +1,4 @@
 ---
 title: Back to the new river
-hero_image:
+hero_image: new-river
 ---

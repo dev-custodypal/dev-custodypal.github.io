@@ -1,6 +1,6 @@
 ---
 title: Our first mooring buoy!
-hero_image:
+hero_image: las-olas-bridge
 ---
 #### Dock #4 -  Mooring Buoy by Las Olas Bridge
 This was interesting as we did this all on our own!! Big news for us. We had to get out of a tight spot in the marina, and then get into the ...
