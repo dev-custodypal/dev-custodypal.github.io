@@ -139,12 +139,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_updates/2026-03-17-mooring-bouy-by-las-olas-bridge.md",
+                "file": "_updates/2026-03-17-mooring-buoy-by-las-olas-bridge.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-17-mooring-bouy-by-las-olas-bridge"
+              "title": "2026-03-17-mooring-buoy-by-las-olas-bridge"
             }
           },
           {
@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_updates/2026-04-02-is-this-the-taxi.md",
+                "file": "_updates/2026-02-22-windy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-02-is-this-the-taxi"
+              "title": "2026-02-22-windy"
             }
           }
         ],
@@ -355,14 +355,14 @@
   },
   "active": "e4a277a20a3e66ec",
   "lastOpenFiles": [
+    "_updates/2026-03-17-mooring-buoy-by-las-olas-bridge.md",
+    "_updates/2026-04-02-is-this-the-taxi.md",
     "_updates/2026-02-20-first-night.md",
     "_updates/2026-03-28-first-night-at-anchor.md",
     "_updates/2026-03-28-back-to-the-new-river.md",
     "_updates/2026-03-25-new-ocean-unlocked.md",
-    "_updates/2026-03-17-mooring-bouy-by-las-olas-bridge.md",
     "_updates/2026-03-02-off-to-just-cats.md",
     "_updates/2026-02-25-docked-at-doms.md",
-    "_updates/2026-04-02-is-this-the-taxi.md",
     "_updates/2026-04-03-new update.md",
     "_updates/2026-02-28-first-dinghy-trip.md",
     "_updates/2026-02-22-windy.md",
