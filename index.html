@@ -64,7 +64,7 @@ title: Home
                 {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
                 {% for update in sorted_updates %}
 
-<a href="/updates" class="flex gap-4 group">
+<a href="/updates/#{{ update.title | slugify }}" class="flex gap-4 group">
 
   {% if update.hero_image %}
     {% assign images = site.static_files | where_exp: "file", "file.path contains update.hero_image" %}

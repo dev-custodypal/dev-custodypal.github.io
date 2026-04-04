@@ -27,7 +27,7 @@ permalink: /updates/
         {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
         {% for update in sorted_updates %}
 
-            <div class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <div id="{{ update.title | slugify }}" class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
                   {% if update.hero_image %}
 
