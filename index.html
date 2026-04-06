@@ -66,13 +66,23 @@ title: Home
 
 <a href="/updates/#{{ update.title | slugify }}" class="flex gap-4 group">
 
-  {% if update.hero_image %}
-    {% assign images = site.static_files | where_exp: "file", "file.path contains update.hero_image" %}
-    {% if images.size > 0 %}
-      <img src="{{ images[0].path }}"
-           class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
-    {% endif %}
+
+
+
+{% assign thumb_slug = "" %}
+{% if update.hero_image %}
+  {% assign thumb_slug = update.hero_image %}
+{% elsif update.images %}
+  {% assign thumb_slug = update.images[0] %}
+{% endif %}
+{% if thumb_slug != "" %}
+  {% assign thumb_file = site.static_files | where_exp: "file", "file.path contains thumb_slug" %}
+  {% if thumb_file.size > 0 %}
+    <img src="{{ thumb_file[0].path }}"
+         class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
   {% endif %}
+{% endif %}
+
 
   <div>
     <p class="text-xs text-gray-400 mb-1">
