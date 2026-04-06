@@ -4,60 +4,248 @@ title: Updates
 permalink: /updates/
 ---
 
+<style>
+  /* ── Carousel ───────────────────────────────────── */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0; /* inherits from parent card */
+    touch-action: pan-y;
+    user-select: none;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+  }
+
+  .carousel-track img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 224px; /* h-56 */
+    object-fit: cover;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+  }
+
+  
+  /* Arrow buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 0;
+  }
+
+  .carousel:hover .carousel-btn { opacity: 1; }
+
+  .carousel-btn svg {
+    width: 12px;
+    height: 12px;
+    stroke: #222;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .carousel-btn.prev { left: 8px; }
+  .carousel-btn.next { right: 8px; }
+  .carousel-btn:disabled { opacity: 0 !important; }
+
+  /* Dot indicators */
+  .carousel-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    z-index: 10;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+
+  .carousel-dot.active {
+    background: white;
+    transform: scale(1.2);
+  }
+</style>
+
 <!-- Page Header -->
 <section class="bg-sand border-b border-gray-200">
   <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-
     <h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-ink mb-6">
       Latest Updates
     </h1>
-
     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
       Stay informed about our journey
     </p>
-
   </div>
 </section>
 
-
 <!-- Updates Grid -->
 <section class="max-w-6xl mx-auto px-10 py-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-30">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-30">
 
-        {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
-        {% for update in sorted_updates %}
+    {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
+    {% for update in sorted_updates %}
 
-            <div id="{{ update.title | slugify }}" class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+      <div id="{{ update.title | slugify }}" class="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
-                  {% if update.hero_image %}
+        {% comment %} Build image list — supports both `images` array and legacy `hero_image` {% endcomment %}
+        {% assign image_paths = "" | split: "" %}
 
-                    {% assign images = site.static_files | where_exp: "file", "file.path contains update.hero_image" %}
+        {% if update.images %}
+          {% for img_slug in update.images %}
+            {% assign matched = site.static_files | where_exp: "file", "file.path contains img_slug" %}
+            {% if matched.size > 0 %}
+              {% assign image_paths = image_paths | push: matched[0].path %}
+            {% endif %}
+          {% endfor %}
+        {% elsif update.hero_image %}
+          {% assign matched = site.static_files | where_exp: "file", "file.path contains update.hero_image" %}
+          {% if matched.size > 0 %}
+            {% assign image_paths = image_paths | push: matched[0].path %}
+          {% endif %}
+        {% endif %}
 
-                    {% if images.size > 0 %}
-                    <div class="overflow-hidden">
-                    <img src="{{ images[0].path }}"
-                        alt="{{ update.title}}"
-                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    {% endif %}
+        {% if image_paths.size > 0 %}
+          {% assign carousel_id = update.title | slugify | append: "-carousel" %}
+          <div class="carousel overflow-hidden" id="{{ carousel_id }}" data-index="0">
 
-                {% endif %}
-                <div class="p-8">
-                    <h3 class="font-semibold text-gray-800 mb-2 text-lg">{{ update.title }}</h3>
-                    <div class="text-sm text-gray-400 mb-3">
-                        {{ update.date | date: "%B %d, %Y" }}
-                       <p>
-                            {% include time-ago.html date=update.date %}
-                       </p> 
-                    </div>
-
-                    <div class="prose prose-sm max-w-none">
-                        {{ update.content }}
-                    </div>
-                </div>
+            <div class="carousel-track">
+              {% for path in image_paths %}
+                <img src="{{ path }}" alt="{{ update.title }}{% if forloop.length > 1 %} ({{ forloop.index }} of {{ forloop.length }}){% endif %}">
+              {% endfor %}
             </div>
-            
 
-        {% endfor %}
-    </div>
+            {% if image_paths.size > 1 %}
+              <button class="carousel-btn prev" aria-label="Previous">
+                <svg viewBox="0 0 12 12"><polyline points="8,2 4,6 8,10"/></svg>
+              </button>
+              <button class="carousel-btn next" aria-label="Next">
+                <svg viewBox="0 0 12 12"><polyline points="4,2 8,6 4,10"/></svg>
+              </button>
+              <div class="carousel-dots">
+                {% for path in image_paths %}
+                  <div class="carousel-dot {% if forloop.first %}active{% endif %}"></div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
+        <div class="p-8">
+          <h3 class="font-semibold text-gray-800 mb-2 text-lg">{{ update.title }}</h3>
+          <div class="text-sm text-gray-400 mb-3">
+            {{ update.date | date: "%B %d, %Y" }}
+            <p>{% include time-ago.html date=update.date %}</p>
+          </div>
+          <div class="prose prose-sm max-w-none">
+            {{ update.content }}
+          </div>
+        </div>
+
+      </div>
+
+    {% endfor %}
+  </div>
 </section>
+
+<script>
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track    = carousel.querySelector('.carousel-track');
+  const dots     = carousel.querySelectorAll('.carousel-dot');
+  const prevBtn  = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn  = carousel.querySelector('.carousel-btn.next');
+  const total    = carousel.querySelectorAll('.carousel-track img').length;
+  let index      = 0;
+  let startX     = 0;
+  let isDragging = false;
+  let dragDelta  = 0;
+
+  if (total <= 1) return;
+
+  function goTo(n) {
+    index = (n + total) % total;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    if (prevBtn) prevBtn.disabled = index === 0;
+    if (nextBtn) nextBtn.disabled = index === total - 1;
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); goTo(index - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); goTo(index + 1); });
+  dots.forEach((dot, i) => dot.addEventListener('click', e => { e.stopPropagation(); goTo(i); }));
+
+  // Touch swipe
+  carousel.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  }, { passive: true });
+
+  carousel.addEventListener('touchmove', e => {
+    if (!isDragging) return;
+    dragDelta = e.touches[0].clientX - startX;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(calc(-${index * 100}% + ${dragDelta}px))`;
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', () => {
+    isDragging = false;
+    track.style.transition = '';
+    if (dragDelta < -50) goTo(index + 1);
+    else if (dragDelta > 50) goTo(index - 1);
+    else goTo(index);
+    dragDelta = 0;
+  });
+
+  // Mouse drag
+  carousel.addEventListener('mousedown', e => {
+    startX = e.clientX;
+    isDragging = true;
+  });
+
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    dragDelta = e.clientX - startX;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(calc(-${index * 100}% + ${dragDelta}px))`;
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.transition = '';
+    if (dragDelta < -50) goTo(index + 1);
+    else if (dragDelta > 50) goTo(index - 1);
+    else goTo(index);
+    dragDelta = 0;
+  });
+
+  goTo(0);
+});
+</script>
