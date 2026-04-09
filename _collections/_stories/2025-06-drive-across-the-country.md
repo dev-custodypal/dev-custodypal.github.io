@@ -3,7 +3,7 @@ layout: post
 title: Drive across the country
 date: 2025-06-15
 image_folder: road-trip-2025
-hero_image: childress/cadilac-ranch.jpg
+hero_image: childress/cadilac-ranch.webp
 excerpt: Our journey across the country
 toc: true
 locations:
