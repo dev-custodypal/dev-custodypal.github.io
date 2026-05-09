@@ -2,6 +2,13 @@
 title: "Boat lessons with Dominic"
 hero_image: "sunflowers.jpg"
 gallery: "2026-02-20-boat-lessons-with-dominic"
+date: 2026-02-20
+toc: true
+hero_image: sunflowers.jpg
+image_folder: road-trip
+locations:
+ - fort-lauderdale
+published: true
 ---
 
 ## Our first week
