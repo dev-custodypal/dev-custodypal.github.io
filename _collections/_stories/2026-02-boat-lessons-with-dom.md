@@ -1,22 +1,15 @@
 ---
-# Required changes
-# - DATE: this should be filled in for you, based on the date you started writing the entry
-# - IMAGE_FOLDER: if you have pictures, create a new folder for them in the gallery folder and then use that new folder name for image_folder
-# - if you want a map then add locations like this:
-#    locations:
-#.    - some-place
-#
-layout: post
-title: Boat lessons with Dominic
-date: 2026-02-20
-toc: true
-hero_image: sunflowers.jpg
-image_folder: road-trip
-locations:
- - fort-lauderdale
-published: false
-
+title: "Boat lessons with Dominic"
+hero_image: "sunflowers.jpg"
+gallery: "2026-02-20-boat-lessons-with-dominic"
 ---
+
 ## Our first week
 
-We closed on our boat on Wednesday February xx. However, we couldn't sleep on the boat in its location as the dock agreement expressly forbade liveaboards.  So we knew that we had to move the boat. However, we didnt hve the skillls and the boat was in a really tricky location. So we decided to get some 'new owner' lessons from a company called Premium Captains. 
+We closed on our boat on Wednesday February 18th. However, we couldn't sleep on the boat in its location as the dock agreement expressly forbade liveaboards.  So we knew that we had to move the boat. However, we didn't have the skills and the boat was in a really tricky location (it was behind someone's house and they had pillings at each end of their dock area). As a result we decided to get some 'new owner' lessons from a company called Premium Captains.
+
+This was hands down the best decision - a) because we really needed to know how to be confident with the boat in small spaces, but more importantly, b) we met Domonic!
+
+Not only is Domonic a great teacher, he is also a really solid person and has helped us to no end. He even hosted S' 7th birthday party at his house!
+
+Domonic taught us all about our boat systems, how to dock, how to anchor, gave us advice on apps to use, helped us pumpout our boat, organized dockage behind his house. Just a few things :)
