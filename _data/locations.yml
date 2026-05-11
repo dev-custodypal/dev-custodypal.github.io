@@ -125,3 +125,8 @@ st-petersburg:
   name: St Petersburg
   lat: 27.7829964
   lng: -82.8209109
+fort-lauderdale:
+  name: Fort Lauderdale
+  lat: 26.1194844
+  lng: -80.1625317
+  trip: boat-lessons-with-dominic

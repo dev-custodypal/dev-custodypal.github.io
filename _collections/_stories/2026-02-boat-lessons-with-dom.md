@@ -1,13 +1,11 @@
 ---
 title: "Boat lessons with Dominic"
-hero_image: "sunflowers.jpg"
-gallery: "2026-02-20-boat-lessons-with-dominic"
 date: 2026-02-20
 toc: true
-hero_image: sunflowers.jpg
-image_folder: road-trip
+hero_image: "2026-02-20-boat-lessons-with-dominic/suzanne-and-dom"
+image_folder: "2026-02-20-boat-lessons-with-dominic"
 locations:
- - fort-lauderdale
+  - fort-lauderdale
 published: true
 ---
 
