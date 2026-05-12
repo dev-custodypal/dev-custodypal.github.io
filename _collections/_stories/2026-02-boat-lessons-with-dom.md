@@ -2,11 +2,11 @@
 title: "Boat lessons with Dominic"
 date: 2026-02-20
 toc: true
-hero_image: "2026-02-20-boat-lessons-with-dominic/suzanne-and-dom"
+hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom"
 image_folder: "2026-02-20-boat-lessons-with-dominic"
 locations:
   - fort-lauderdale
-published: true
+published: false
 ---
 
 ## Our first week
