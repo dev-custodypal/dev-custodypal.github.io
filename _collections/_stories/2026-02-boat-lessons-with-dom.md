@@ -2,23 +2,11 @@
 title: "Boat lessons with Dominic"
 date: 2026-02-10
 toc: true
-hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom"
+hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom.webp"
 image_folder: "2026-02-10-boat-lessons-with-dominic"
-images:
-  - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom"
-    title: "fort-lauderdale-suzanne-and-dom"
-  - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-birthday-girl-in-the-pool"
-    title: "fort lauderdale birthday girl in the pool"
-  - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-anchored-at-lighthouse-point"
-    title: "fort lauderdale anchored at lighthouse point"
-  - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-on-the-way-to-lighthouse-point"
-    title: "fort lauderdale on the way to lighthouse point"
-  - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-turtle"
-    title: "fort lauderdale turtle"
-  - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-img1469"
-    title: "fort lauderdale img1469"
 locations:
   - lighthouse-point
+  - fort-lauderdales
 published: true
 ---
 
