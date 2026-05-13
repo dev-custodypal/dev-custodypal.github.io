@@ -2,7 +2,7 @@
 title: "Boat lessons with Dominic"
 date: 2026-02-20
 toc: true
-hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom.webp"
+hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-anchored-at-lighthouse-point.webp"
 image_folder: "2026-02-20-boat-lessons-with-dominic"
 locations:
   - lighthouse-point
