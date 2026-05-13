@@ -6,7 +6,7 @@ hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-do
 image_folder: "2026-02-10-boat-lessons-with-dominic"
 locations:
   - lighthouse-point
-  - fort-lauderdales
+  - fort-lauderdale
 published: true
 ---
 
