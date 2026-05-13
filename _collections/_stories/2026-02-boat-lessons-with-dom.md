@@ -1,9 +1,9 @@
 ---
 title: "Boat lessons with Dominic"
-date: 2026-02-20
+date: 2026-02-10
 toc: true
 hero_image: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom"
-image_folder: "2026-02-20-boat-lessons-with-dominic"
+image_folder: "2026-02-10-boat-lessons-with-dominic"
 images:
   - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-suzanne-and-dom"
     title: "fort-lauderdale-suzanne-and-dom"
@@ -18,7 +18,7 @@ images:
   - slug: "2026-02-20-boat-lessons-with-dominic/fort-lauderdale-img1469"
     title: "fort lauderdale img1469"
 locations:
-  - fort-lauderdale
+  - lighthouse-point
 published: true
 ---
 

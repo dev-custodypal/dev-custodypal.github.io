@@ -130,3 +130,8 @@ fort-lauderdale:
   lat: 26.1194844
   lng: -80.1625317
   trip: boat-lessons-with-dominic
+lighthouse-point:
+  name: Lighthouse Point
+  lat: 26.2597154
+  lng: -80.0831151
+  trip: -boat-lessons-with-dominic
