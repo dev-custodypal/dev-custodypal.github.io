@@ -1,5 +1,5 @@
 ---
-title: "Anchored at Hin Sur Mar (again)"
+title: "Anchored at Gin Sur Mar (again)"
 date: 2026-06-20
 hero_image: "2026-06-20-anchored-at-hin-sur-mar-again"
 ---
