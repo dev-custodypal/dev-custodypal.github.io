@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
   <link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="{{ site.url }}{{ site.baseurl }}/" rel="alternate" type="text/html"/>
@@ -36,13 +36,32 @@ layout: null
     {% else %}
     <id>{{ site.url }}{{ site.baseurl }}{{ post.url }}</id>
     {% endif %}
+    {% assign feed_image_ref = "" %}
+    {% if post.images and post.images.size > 0 %}
+      {% assign feed_image_ref = post.images[0] %}
+    {% elsif post.hero_image %}
+      {% assign feed_image_ref = post.hero_image %}
+    {% endif %}
+    {% if feed_image_ref != "" %}
+      {% capture feed_image_url %}{% include resolve-image.html path=feed_image_ref %}{% endcapture %}
+      {% assign feed_image_url = feed_image_url | strip %}
+    {% else %}
+      {% assign feed_image_url = "" %}
+    {% endif %}
     <content type="html" xml:base="{{ site.url }}{{ site.baseurl }}{% if post.collection == 'updates' %}/updates/{% else %}{{ post.url }}{% endif %}">
+      {% if feed_image_url != "" %}
+        {{ "<img src=\"" | append: feed_image_url | append: "\" alt=\"" | append: post.title | append: "\" style=\"max-width:100%;height:auto;margin-bottom:1em;\"><br>" | xml_escape }}
+      {% endif %}
       {% if post.content %}
         {{ post.content | xml_escape }}
       {% else %}
         {{ post.description | xml_escape }}
       {% endif %}
     </content>
+    {% if feed_image_url != "" %}
+    <media:content url="{{ feed_image_url | xml_escape }}" medium="image"/>
+    <media:thumbnail url="{{ feed_image_url | xml_escape }}"/>
+    {% endif %}
     <author>
       <name>{{ site.author | xml_escape }}</name>
     </author>
