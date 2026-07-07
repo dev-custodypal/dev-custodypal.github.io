@@ -50,7 +50,7 @@ layout: null
     {% endif %}
     <content type="html" xml:base="{{ site.url }}{{ site.baseurl }}{% if post.collection == 'updates' %}/updates/{% else %}{{ post.url }}{% endif %}">
       {% if feed_image_url != "" %}
-        {{ "<img src=\"" | append: feed_image_url | append: "\" alt=\"" | append: post.title | append: "\" style=\"max-width:100%;height:auto;margin-bottom:1em;\"><br>" | xml_escape }}
+        {{ '<img src="' | append: feed_image_url | append: '" alt="' | append: post.title | append: '" style="max-width:100%;height:auto;margin-bottom:1em;"><br>' | xml_escape }}
       {% endif %}
       {% if post.content %}
         {{ post.content | xml_escape }}

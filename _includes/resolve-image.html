@@ -1,0 +1,23 @@
+{% comment %}
+    Resolves a hero_image/images entry to a usable, fully-qualified URL. 
+    Usage:  {% capture resolved %}
+            {% include resolve-image.html   path=post.hero_image %}
+            {% endcapture %} - Full URL (http/https) -> passed through unchanged - Local slug/path (e.g. "sunset" or
+                "/assets/images/gallery/sunset.jpg") -> matched against site.static_files if possible, otherwise treated as a path Always returns an ABSOLUTE url (not
+relative_url) because this include is shared by on-page templates AND feed.xml.
+Relative paths break in a feed reader, which has no browser base URL to resolve
+them against. 
+{% endcomment %}
+
+{% assign p = include.path %}
+
+{% if p contains "http://" or p contains "https://" %}
+    {{ p }}
+{% else %}
+    {% assign matched = site.static_files | where_exp: "file", "file.path contains p" %}
+    {% if matched.size > 0 %}
+        {{ matched[0].path | absolute_url }}
+    {% else %}
+        {{ p | absolute_url }}
+    {% endif %}
+{% endif %}
